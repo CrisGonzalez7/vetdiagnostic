@@ -6,44 +6,7 @@
 }
 
 
-/* Plantilla */
-
-.frame {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    height: 400px;
-    margin-top: -200px;
-    margin-left: -200px;
-}
-
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.fondo {
-    display: flex;
-    width: 380px;
-    height: 380px;
-    background: var(--color-fondo);
-    border-radius: 5px;
-    box-shadow: 2px 4px 12px 2px rgba(0, 0, 0, 0.5);
-}
-
-
-/* Centrado */
-
-.centrado {
-    display: flex;
-    margin: auto;
-}
-
-
-/* Icono */
+/*** Icono Menú ***/
 
 .icono-menu {
     width: 90px;
@@ -179,7 +142,8 @@
 }
 
 
-/*
+/*** Icono Menú Fin ***/
+
 .active {
     font-weight: 700;
 }
@@ -188,4 +152,8 @@
     background-image: url(../img/header-inicio.jpg);
     width: 1200px;
     height: 600px;
-}*/
+}
+
+.navegacion {
+    list-style: none;
+}
