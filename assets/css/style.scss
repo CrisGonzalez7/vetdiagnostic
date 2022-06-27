@@ -1,7 +1,9 @@
 @use 'icono-menu';
 @use 'navbar';
+$negro: #35353F;
+$blanco: #F3F7F9;
 header {
-    margin-top: 120px;
+    margin-top: 200px;
 }
 
 .active {

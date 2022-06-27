@@ -1,21 +1,18 @@
 // Variables
-$blanco: black;
-$negro: rgb(16, 16, 16);
+$negro: #35353F;
 $width: 32px;
-$ylinea1: translateY(11px);
-$ylinea3: translateY(-11px);
+$ylinea1: translateY(8px);
+$ylinea3: translateY(-10px);
 // Icono
 .icono-menu {
     width: $width;
-    &:hover {
-        cursor: pointer;
-    }
+    margin: auto;
 }
 
 // Lineas
 @mixin linea() {
-    height: 5px;
-    background-color: $blanco;
+    height: 3px;
+    background-color: $negro;
     border-radius: 5px;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
 }

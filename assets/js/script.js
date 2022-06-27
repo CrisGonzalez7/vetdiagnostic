@@ -3,9 +3,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
     var navHeight = function() {
         const navbar = document.body.querySelector("#nav");
         if (window.scrollY === 0) {
-            navbar.classList.remove("nav60");
+            navbar.classList.remove("nav100");
         } else {
-            navbar.classList.add("nav60");
+            navbar.classList.add("nav100");
         }
     };
 
