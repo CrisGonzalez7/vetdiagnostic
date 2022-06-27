@@ -174,7 +174,7 @@
   }
 }
 
-/* Menu mobile animado */
+/* Menu de navegación */
 .navegacion {
   position: fixed;
   width: 100%;
@@ -221,8 +221,32 @@
   transition: 0.5s;
 }
 
+/* Corrección del top en menú mobile animado */
 .nav4rem {
   top: 4rem;
+}
+
+/* Submenu */
+.enlaces li > ul {
+  display: none;
+}
+.enlaces li.activo > ul {
+  display: block;
+  position: fixed;
+  right: 100px;
+  background-color: red;
+}
+.enlaces li.activo > ul > li {
+  padding: 0 40px;
+}
+
+/* Corrección del top en submenu */
+.submenu {
+  top: 8rem;
+}
+
+.sub6rem {
+  top: 6rem;
 }
 
 /* Nav se achica al hacer scroll */
