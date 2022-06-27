@@ -173,50 +173,56 @@
     display: none;
   }
 }
-.navbar .contenedor .navegacion {
+
+/* Menu mobile animado */
+.navegacion {
   position: fixed;
   width: 100%;
   background: #F3F7F9;
-  top: 4rem;
+  top: 6rem;
   left: 100%;
   text-align: center;
   transition: all 0.5s;
   z-index: 10;
 }
 @media (min-width: 750px) {
-  .navbar .contenedor .navegacion {
+  .navegacion {
     position: inherit;
     display: flex;
   }
 }
-.navbar .contenedor .navegacion .enlaces {
+.navegacion .enlaces {
   font-size: 1.2rem;
 }
 @media (min-width: 750px) {
-  .navbar .contenedor .navegacion .enlaces {
+  .navegacion .enlaces {
     margin: auto 40px auto auto;
     text-align: right;
     font-size: 1.4rem;
   }
 }
-.navbar .contenedor .navegacion .enlaces .enlace {
+.navegacion .enlaces .enlace {
   margin: 50px 0;
   line-height: 30px;
 }
 @media (min-width: 750px) {
-  .navbar .contenedor .navegacion .enlaces .enlace {
+  .navegacion .enlaces .enlace {
     padding-left: 80px;
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
   }
 }
-.navbar .contenedor .navegacion .enlaces .enlace a {
+.navegacion .enlaces .enlace a {
   color: #35353F;
 }
-.navbar .contenedor .navegacion .enlaces .enlace a.active, .navbar .contenedor .navegacion .enlaces .enlace a:hover {
+.navegacion .enlaces .enlace a.active, .navegacion .enlaces .enlace a:hover {
   color: #2E4F5D;
   transition: 0.5s;
+}
+
+.nav4rem {
+  top: 4rem;
 }
 
 /* Nav se achica al hacer scroll */

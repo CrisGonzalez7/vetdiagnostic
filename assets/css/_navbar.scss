@@ -46,47 +46,55 @@ $azul-oscuro: #2E4F5D;
                 }
             }
         }
-        .navegacion {
-            position: fixed;
-            width: 100%;
-            background: $blanco;
-            top: 4rem;
-            left: 100%;
-            text-align: center;
-            transition: all .5s;
-            z-index: 10;
+    }
+}
+
+
+/* Menu mobile animado */
+
+.navegacion {
+    position: fixed;
+    width: 100%;
+    background: $blanco;
+    top: 6rem;
+    left: 100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 10;
+    @media (min-width: 750px) {
+        position: inherit;
+        display: flex;
+    }
+    .enlaces {
+        font-size: 1.2rem;
+        @media (min-width: 750px) {
+            margin: auto 40px auto auto;
+            text-align: right;
+            font-size: 1.4rem;
+        }
+        .enlace {
+            margin: 50px 0;
+            line-height: 30px;
             @media (min-width: 750px) {
-                position: inherit;
-                display: flex;
+                padding-left: 80px;
+                display: inline-block;
+                line-height: 80px;
+                margin: 0 5px;
             }
-            .enlaces {
-                font-size: 1.2rem;
-                @media (min-width: 750px) {
-                    margin: auto 40px auto auto;
-                    text-align: right;
-                    font-size: 1.4rem;
-                }
-                .enlace {
-                    margin: 50px 0;
-                    line-height: 30px;
-                    @media (min-width: 750px) {
-                        padding-left: 80px;
-                        display: inline-block;
-                        line-height: 80px;
-                        margin: 0 5px;
-                    }
-                    a {
-                        color: $negro;
-                        &.active,
-                        &:hover {
-                            color: $azul-oscuro;
-                            transition: .5s;
-                        }
-                    }
+            a {
+                color: $negro;
+                &.active,
+                &:hover {
+                    color: $azul-oscuro;
+                    transition: .5s;
                 }
             }
         }
     }
+}
+
+.nav4rem {
+    top: 4rem;
 }
 
 
