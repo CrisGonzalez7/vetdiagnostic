@@ -1,0 +1,45 @@
+.nav {
+    height: 6rem;
+    border-bottom: solid;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    transition: height 0.3s;
+    display: flex;
+}
+
+.contenedor {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: auto 0;
+    border: solid;
+    width: 10rem;
+    text-align: center;
+    height: 4rem;
+    transition: height 0.3s;
+}
+
+.menu {
+    margin: auto 0;
+    width: 3rem;
+    border: solid;
+    text-align: center;
+    height: 2rem;
+}
+
+.nav60 {
+    height: 4rem;
+    transition: height 0.3s;
+}
+
+.nav60 .logo {
+    height: 2rem;
+    transition: height 0.3s;
+}

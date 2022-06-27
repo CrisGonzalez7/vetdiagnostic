@@ -11,7 +11,14 @@
 </head>
 
 <body>
-    <nav>
+    <div class="nav" id="nav">
+        <div class="contenedor">
+            <div class="logo">Logo</div>
+            <div class="menu">M</div>
+        </div>
+    </div>
+
+    <!--<nav>
         <div class="logo">
             <a href="#inicio" class="link-logo"><img src="assets/img/logo-vetdiagnostic.png" alt="Botón Inicio - VetDiagnostic"></a>
         </div>
@@ -25,7 +32,8 @@
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
-    </nav>
+    </nav>-->
+
 
     <header>
         <div class="header-inicio">
@@ -81,13 +89,7 @@
     </footer>
 
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    <script>
-        let elementoMenu = document.getElementsByClassName('icono-menu')[0];
-
-        document.addEventListener('click', function(event) {
-            elementoMenu.classList.toggle('activo');
-        });
-    </script>
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>

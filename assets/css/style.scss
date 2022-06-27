@@ -1,4 +1,9 @@
 @use 'icono-menu';
+@use 'navbar';
+header {
+    margin-top: 120px;
+}
+
 .active {
     font-weight: 700;
 }
