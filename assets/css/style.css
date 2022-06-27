@@ -146,6 +146,12 @@
     width: 100%;
   }
 }
+.nav .contenedor #check {
+  /* display: none;*/
+}
+.nav .contenedor #check:checked ~ ul {
+  left: 0;
+}
 .nav .contenedor .checkbtn {
   display: block;
 }
@@ -202,7 +208,7 @@
   width: 100%;
   background: #F3F7F9;
   top: 4rem;
-  right: -100%;
+  left: 100%;
   text-align: center;
   transition: all 0.5s;
   z-index: 10;
@@ -216,6 +222,10 @@
     text-align: right;
     background: none;
   }
+}
+.navegacion .enlace {
+  margin: 50px 0;
+  line-height: 30px;
 }
 @media (min-width: 750px) {
   .navegacion .enlace {
@@ -262,48 +272,41 @@ li a:hover {
     margin-right: 40px;
     cursor: pointer;
 }*/
-#check {
-  display: none;
-}
-
 /*  .enlace {
         padding-left: 20px;
     }*/
 /*  nav ul li a {
         font-size: 16px;
     }*/
-@media (max-width: 858px) {
-  /*.checkbtn {
-      display: block;
-  }*/
-  /*ul {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: $blanco;
-      top: 4rem;
-      left: -100%;
-      text-align: center;
-      transition: all .5s;
-      z-index: 10;
-  }*/
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  nav ul li a {
-    font-size: 20px;
-  }
-  li a:hover,
-li a.active {
-    background: none;
-    color: red;
-  }
-  #check:checked ~ ul {
-    right: 0;
-  }
-}
+/*  @media (max-width: 858px) {*/
+/*.checkbtn {
+        display: block;
+    }*/
+/*ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: $blanco;
+        top: 4rem;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 10;
+    }*/
+/*    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }*/
+/* nav ul li a {
+            font-size: 20px;
+    } */
+/*   li a:hover,
+    li a.active {
+        background: none;
+        color: red;
+    }*/
+/*   }*/
 * {
   padding: 0;
   margin: 0;
