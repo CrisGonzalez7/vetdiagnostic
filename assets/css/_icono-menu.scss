@@ -1,0 +1,140 @@
+// Variables
+$blanco: black;
+$negro: rgb(16, 16, 16);
+$width: 32px;
+$ylinea1: translateY(11px);
+$ylinea3: translateY(-11px);
+// Icono
+.icono-menu {
+    width: $width;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// Lineas
+@mixin linea() {
+    height: 5px;
+    background-color: $blanco;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.linea-1 {
+    @include linea();
+}
+
+.linea-2 {
+    @include linea();
+    margin: 6px auto;
+    /* Separación entre lineas */
+}
+
+.linea-3 {
+    @include linea();
+}
+
+// Animacion
+.icono-menu {
+    // Inicial
+    .linea-1 {
+        animation: linea-1-inicial ease-in-out forwards 0.8s;
+    }
+    .linea-2 {
+        animation: linea-2-inicial ease-in-out forwards 0.8s;
+    }
+    .linea-3 {
+        animation: linea-3-inicial ease-in-out forwards 0.8s;
+    }
+    // Activo
+    &.activo {
+        .linea-1 {
+            animation: linea-1 ease-in-out forwards 0.8s;
+        }
+        .linea-2 {
+            animation: linea-2 ease-in-out forwards 0.6s;
+        }
+        .linea-3 {
+            animation: linea-3 ease-in-out forwards 0.8s;
+        }
+    }
+}
+
+// Keyframes
+@keyframes linea-1 {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: $ylinea1 rotate(0);
+    }
+    100% {
+        transform: $ylinea1 rotate(45deg);
+    }
+}
+
+@keyframes linea-1-inicial {
+    0% {
+        transform: $ylinea1 rotate(45deg);
+    }
+    50% {
+        transform: $ylinea1 rotate(0);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes linea-2 {
+    0% {
+        width: $width;
+        opacity: 1;
+    }
+    80% {
+        width: 10px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 0px;
+        opacity: 0;
+    }
+}
+
+@keyframes linea-2-inicial {
+    0% {
+        width: 0px;
+        opacity: 0;
+    }
+    50% {
+        width: 10px;
+        opacity: 0.5;
+    }
+    100% {
+        width: $width;
+        opacity: 1;
+    }
+}
+
+@keyframes linea-3 {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: $ylinea3 rotate(0);
+    }
+    100% {
+        transform: $ylinea3 rotate(135deg);
+    }
+}
+
+@keyframes linea-3-inicial {
+    0% {
+        transform: $ylinea3 rotate(135deg);
+    }
+    50% {
+        transform: $ylinea3 rotate(0);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
