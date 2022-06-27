@@ -136,10 +136,15 @@
   }
 }
 .nav .contenedor {
-  width: 90vw;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+}
+@media (min-width: 750px) {
+  .nav .contenedor {
+    width: 100%;
+  }
 }
 .nav .menu-mobile {
   display: flex;
@@ -193,8 +198,8 @@ header {
 }
 
 .header-inicio {
-  background-image: url(../img/header-inicio.jpg);
-  width: 1200px;
+  background-image: url(../img/header-inicio.png);
+  width: 90vw;
   height: 600px;
 }
 
