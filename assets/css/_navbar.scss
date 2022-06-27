@@ -1,7 +1,7 @@
 $blanco: #F3F7F9;
 $negro: #35353F;
 $azul-oscuro: #2E4F5D;
-.nav {
+.navbar {
     height: 6rem;
     position: fixed;
     top: 0;
@@ -24,16 +24,16 @@ $azul-oscuro: #2E4F5D;
             width: 100%;
         }
         #check {
-            /* display: none;*/
-            @media (min-width: 750px) {
-                display: none;
-            }
+            display: none;
         }
-        #check:checked~ul {
+        #check:checked~nav {
             left: 0;
         }
         .checkbtn {
             display: block;
+            height: 32px;
+            width: 32px;
+            margin: auto 0;
             @media (min-width: 750px) {
                 display: none;
             }
@@ -56,27 +56,32 @@ $azul-oscuro: #2E4F5D;
             transition: all .5s;
             z-index: 10;
             @media (min-width: 750px) {
-                position: relative;
-                float: right;
-                top: 0;
-                right: 0;
-                text-align: right;
-                background: none;
+                position: inherit;
+                display: flex;
             }
-            .enlace {
-                margin: 50px 0;
-                line-height: 30px;
+            .enlaces {
+                font-size: 1.2rem;
                 @media (min-width: 750px) {
-                    display: inline-block;
-                    line-height: 80px;
-                    margin: 0 5px;
+                    margin: auto 40px auto auto;
+                    text-align: right;
+                    font-size: 1.4rem;
                 }
-                a {
-                    color: $negro;
-                    &.active,
-                    &:hover {
-                        color: $azul-oscuro;
-                        transition: .5s;
+                .enlace {
+                    margin: 50px 0;
+                    line-height: 30px;
+                    @media (min-width: 750px) {
+                        padding-left: 80px;
+                        display: inline-block;
+                        line-height: 80px;
+                        margin: 0 5px;
+                    }
+                    a {
+                        color: $negro;
+                        &.active,
+                        &:hover {
+                            color: $azul-oscuro;
+                            transition: .5s;
+                        }
                     }
                 }
             }

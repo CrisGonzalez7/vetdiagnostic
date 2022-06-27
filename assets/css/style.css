@@ -28,22 +28,22 @@
 }
 
 .icono-menu .linea-1 {
-  animation: linea-1-inicial ease-in-out forwards 0.8s;
+  animation: linea-1-inicial ease-in-out forwards 0.4s;
 }
 .icono-menu .linea-2 {
-  animation: linea-2-inicial ease-in-out forwards 0.8s;
+  animation: linea-2-inicial ease-in-out forwards 0.4s;
 }
 .icono-menu .linea-3 {
-  animation: linea-3-inicial ease-in-out forwards 0.8s;
+  animation: linea-3-inicial ease-in-out forwards 0.4s;
 }
 .icono-menu.activo .linea-1 {
-  animation: linea-1 ease-in-out forwards 0.8s;
+  animation: linea-1 ease-in-out forwards 0.4s;
 }
 .icono-menu.activo .linea-2 {
-  animation: linea-2 ease-in-out forwards 0.6s;
+  animation: linea-2 ease-in-out forwards 0.2s;
 }
 .icono-menu.activo .linea-3 {
-  animation: linea-3 ease-in-out forwards 0.8s;
+  animation: linea-3 ease-in-out forwards 0.4s;
 }
 
 @keyframes linea-1 {
@@ -118,7 +118,7 @@
     transform: translateY(0) rotate(0);
   }
 }
-.nav {
+.navbar {
   height: 6rem;
   position: fixed;
   top: 0;
@@ -131,51 +131,49 @@
   box-shadow: 0px 1px 6px #CDCDCD;
 }
 @media (min-width: 750px) {
-  .nav {
+  .navbar {
     height: 8rem;
   }
 }
-.nav .contenedor {
+.navbar .contenedor {
   width: 90%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
 @media (min-width: 750px) {
-  .nav .contenedor {
+  .navbar .contenedor {
     width: 100%;
   }
 }
-.nav .contenedor #check {
-  /* display: none;*/
+.navbar .contenedor #check {
+  display: none;
 }
-@media (min-width: 750px) {
-  .nav .contenedor #check {
-    display: none;
-  }
-}
-.nav .contenedor #check:checked ~ ul {
+.navbar .contenedor #check:checked ~ nav {
   left: 0;
 }
-.nav .contenedor .checkbtn {
+.navbar .contenedor .checkbtn {
   display: block;
+  height: 32px;
+  width: 32px;
+  margin: auto 0;
 }
 @media (min-width: 750px) {
-  .nav .contenedor .checkbtn {
+  .navbar .contenedor .checkbtn {
     display: none;
   }
 }
-.nav .contenedor .checkbtn .icono-mobile {
+.navbar .contenedor .checkbtn .icono-mobile {
   display: flex;
   height: 32px;
   margin: auto 0;
 }
 @media (min-width: 750px) {
-  .nav .contenedor .checkbtn .icono-mobile {
+  .navbar .contenedor .checkbtn .icono-mobile {
     display: none;
   }
 }
-.nav .contenedor .navegacion {
+.navbar .contenedor .navegacion {
   position: fixed;
   width: 100%;
   background: #F3F7F9;
@@ -186,30 +184,37 @@
   z-index: 10;
 }
 @media (min-width: 750px) {
-  .nav .contenedor .navegacion {
-    position: relative;
-    float: right;
-    top: 0;
-    right: 0;
-    text-align: right;
-    background: none;
+  .navbar .contenedor .navegacion {
+    position: inherit;
+    display: flex;
   }
 }
-.nav .contenedor .navegacion .enlace {
+.navbar .contenedor .navegacion .enlaces {
+  font-size: 1.2rem;
+}
+@media (min-width: 750px) {
+  .navbar .contenedor .navegacion .enlaces {
+    margin: auto 40px auto auto;
+    text-align: right;
+    font-size: 1.4rem;
+  }
+}
+.navbar .contenedor .navegacion .enlaces .enlace {
   margin: 50px 0;
   line-height: 30px;
 }
 @media (min-width: 750px) {
-  .nav .contenedor .navegacion .enlace {
+  .navbar .contenedor .navegacion .enlaces .enlace {
+    padding-left: 80px;
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
   }
 }
-.nav .contenedor .navegacion .enlace a {
+.navbar .contenedor .navegacion .enlaces .enlace a {
   color: #35353F;
 }
-.nav .contenedor .navegacion .enlace a.active, .nav .contenedor .navegacion .enlace a:hover {
+.navbar .contenedor .navegacion .enlaces .enlace a.active, .navbar .contenedor .navegacion .enlaces .enlace a:hover {
   color: #2E4F5D;
   transition: 0.5s;
 }
@@ -247,12 +252,27 @@
   }
 }
 
+@font-face {
+  font-family: "Swis721 BT";
+  src: url(../font/swiss721-bt_roman.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Swis721 BT";
+  src: url(../font/swiss721-bt_bold.ttf);
+  font-weight: bold;
+}
 * {
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+}
+
+nav {
+  font-family: "Swis721 BT", sans-serif;
+  font-weight: normal;
 }
 
 header {
@@ -271,6 +291,11 @@ header {
 
 .navegacion {
   list-style: none;
+}
+
+.examenes img,
+.ubicacion iframe {
+  width: 90vw;
 }
 
 /*# sourceMappingURL=style.css.map */

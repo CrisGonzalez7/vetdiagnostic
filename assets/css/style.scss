@@ -1,5 +1,17 @@
 @use 'icono-menu';
 @use 'navbar';
+@font-face {
+    font-family: 'Swis721 BT';
+    src: url(../font/swiss721-bt_roman.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Swis721 BT';
+    src: url(../font/swiss721-bt_bold.ttf);
+    font-weight: bold;
+}
+
 $negro: #35353F;
 $blanco: #F3F7F9;
 * {
@@ -8,6 +20,11 @@ $blanco: #F3F7F9;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+}
+
+nav {
+    font-family: 'Swis721 BT', sans-serif;
+    font-weight: normal;
 }
 
 header {
@@ -26,4 +43,9 @@ header {
 
 .navegacion {
     list-style: none;
+}
+
+.examenes img,
+.ubicacion iframe {
+    width: 90vw;
 }

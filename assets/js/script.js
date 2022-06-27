@@ -1,7 +1,7 @@
 // Animación Navbar
 window.addEventListener("DOMContentLoaded", (event) => {
     var navHeight = function() {
-        const navbar = document.body.querySelector("#nav");
+        const navbar = document.body.querySelector("#navbar");
         if (window.scrollY === 0) {
             navbar.classList.remove("nav100");
         } else {
@@ -17,6 +17,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 // Animación Ícono Menú
 let elementoMenu = document.getElementsByClassName('icono-menu')[0];
 
-document.addEventListener('click', function(event) {
+elementoMenu.addEventListener('click', function(event) {
     elementoMenu.classList.toggle('activo');
 });

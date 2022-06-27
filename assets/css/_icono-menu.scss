@@ -3,6 +3,7 @@ $negro: #35353F;
 $width: 32px;
 $ylinea1: translateY(8px);
 $ylinea3: translateY(-10px);
+$animation: ease-in-out forwards 0.4s;
 // Icono
 .icono-menu {
     width: $width;
@@ -35,24 +36,24 @@ $ylinea3: translateY(-10px);
 .icono-menu {
     // Inicial
     .linea-1 {
-        animation: linea-1-inicial ease-in-out forwards 0.8s;
+        animation: linea-1-inicial $animation;
     }
     .linea-2 {
-        animation: linea-2-inicial ease-in-out forwards 0.8s;
+        animation: linea-2-inicial $animation;
     }
     .linea-3 {
-        animation: linea-3-inicial ease-in-out forwards 0.8s;
+        animation: linea-3-inicial $animation;
     }
     // Activo
     &.activo {
         .linea-1 {
-            animation: linea-1 ease-in-out forwards 0.8s;
+            animation: linea-1 $animation;
         }
         .linea-2 {
-            animation: linea-2 ease-in-out forwards 0.6s;
+            animation: linea-2 ease-in-out forwards 0.2s;
         }
         .linea-3 {
-            animation: linea-3 ease-in-out forwards 0.8s;
+            animation: linea-3 $animation;
         }
     }
 }
