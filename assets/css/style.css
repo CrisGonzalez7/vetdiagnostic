@@ -124,7 +124,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10;
+  z-index: 12;
   transition: height 0.3s;
   display: flex;
   background-color: #F3F7F9;
@@ -146,13 +146,21 @@
     width: 100%;
   }
 }
-.nav .menu-mobile {
+.nav .contenedor .checkbtn {
+  display: block;
+}
+@media (min-width: 750px) {
+  .nav .contenedor .checkbtn {
+    display: none;
+  }
+}
+.nav .icono-mobile {
   display: flex;
   height: 32px;
   margin: auto 0;
 }
 @media (min-width: 750px) {
-  .nav .menu-mobile {
+  .nav .icono-mobile {
     display: none;
   }
 }
@@ -187,6 +195,121 @@
   .nav100 .imagen-logo {
     height: 6rem;
   }
+}
+
+.navegacion {
+  position: fixed;
+  width: 100%;
+  background: #F3F7F9;
+  top: 4rem;
+  right: -100%;
+  text-align: center;
+  transition: all 0.5s;
+  z-index: 10;
+}
+@media (min-width: 750px) {
+  .navegacion {
+    position: relative;
+    float: right;
+    top: 0;
+    right: 0;
+    text-align: right;
+    background: none;
+  }
+}
+@media (min-width: 750px) {
+  .navegacion .enlace {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+}
+.navegacion .enlace a {
+  color: #35353F;
+}
+.navegacion .enlace a.active, .navegacion .enlace a:hover {
+  color: #2E4F5D;
+  transition: 0.5s;
+}
+
+/* CSS prueba */
+/*  nav ul {
+    float: right;
+    margin-right: 20px;
+}*/
+/*   nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}*/
+/*  nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}*/
+/*  li a.active,
+li a:hover {
+    background: #000090;
+    transition: .5s;
+}*/
+/*  .checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}*/
+#check {
+  display: none;
+}
+
+/*  .enlace {
+        padding-left: 20px;
+    }*/
+/*  nav ul li a {
+        font-size: 16px;
+    }*/
+@media (max-width: 858px) {
+  /*.checkbtn {
+      display: block;
+  }*/
+  /*ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: $blanco;
+      top: 4rem;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      z-index: 10;
+  }*/
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  li a:hover,
+li a.active {
+    background: none;
+    color: red;
+  }
+  #check:checked ~ ul {
+    right: 0;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
 header {
