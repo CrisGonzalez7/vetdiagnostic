@@ -104,18 +104,6 @@ $azul-oscuro: #2E4F5D;
 /* Submenu */
 
 .enlaces {
-    li>ul {
-        display: none;
-    }
-    li.activo>ul {
-        display: block;
-        position: fixed;
-        right: 100px;
-        background-color: $blanco;
-    }
-    li.activo>ul>li {
-        padding: 0 40px;
-    }
     .icono-submenu {
         position: absolute;
         margin-top: 6px;
@@ -126,6 +114,23 @@ $azul-oscuro: #2E4F5D;
     }
     li.activo>a>.icono-submenu {
         transform: translateY(0) rotate(180deg);
+    }
+    li>ul {
+        display: none;
+    }
+    li.activo>ul {
+        display: block;
+        right: 100px;
+        background-color: $blanco;
+        @media (min-width: 750px) {
+            position: fixed;
+        }
+    }
+    li.activo>ul>li {
+        padding: 0 40px;
+    }
+    .submenu li {
+        margin: 1.2rem 0;
     }
 }
 
