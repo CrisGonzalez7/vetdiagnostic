@@ -5,6 +5,12 @@
 
 @font-face {
     font-family: 'Swis721 BT';
+    src: url(../font/swiss721-bt_light.ttf);
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'Swis721 BT';
     src: url(../font/swiss721-bt_roman.ttf);
     font-weight: normal;
 }
@@ -215,6 +221,9 @@ header {
             display: grid;
             text-align: center;
             color: $negro;
+            @media (min-width: 750px) {
+                grid-template-columns: auto auto;
+            }
             .examenes {
                 @include resultados-examenes();
                 @media (min-width: 750px) {
@@ -224,6 +233,28 @@ header {
             .listado-examenes {
                 display: grid;
                 margin: 48px 0 24px;
+                padding: 0 50px;
+                @media (min-width: 750px) {
+                    display: block;
+                }
+                img {
+                    display: none;
+                }
+                .examenes-texto {
+                    h3 {
+                        @media (min-width: 750px) {
+                            font-size: 1.8rem;
+                            margin-bottom: 32px;
+                        }
+                    }
+                    p {
+                        @media (min-width: 750px) {
+                            font-size: 1.4rem;
+                            font-weight: lighter;
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
             }
             .img-servicios-examenes {
                 display: none;
