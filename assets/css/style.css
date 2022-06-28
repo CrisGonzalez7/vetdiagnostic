@@ -330,6 +330,10 @@
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+.bloque-acordion .panel .detalle-examen {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* Fuentes */
 @font-face {
