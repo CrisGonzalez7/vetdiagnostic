@@ -2,6 +2,8 @@ $blanco: #F3F7F9;
 $negro: #35353F;
 $azul-oscuro: #2E4F5D;
 .navbar {
+    font-family: 'Swis721 BT', sans-serif;
+    font-weight: normal;
     height: 6rem;
     position: fixed;
     top: 0;
@@ -15,7 +17,7 @@ $azul-oscuro: #2E4F5D;
     @media (min-width: 750px) {
         height: 8rem;
     }
-    .contenedor {
+    .contenedor-navbar {
         width: 90%;
         display: flex;
         justify-content: space-between;
@@ -87,6 +89,9 @@ $azul-oscuro: #2E4F5D;
                 &:hover {
                     color: $azul-oscuro;
                     transition: .5s;
+                }
+                &.active {
+                    font-weight: 700;
                 }
             }
         }

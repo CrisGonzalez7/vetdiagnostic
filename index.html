@@ -12,7 +12,7 @@
 
 <body>
     <div class="navbar" id="navbar">
-        <div class="contenedor">
+        <div class="contenedor-navbar">
             <div class="logo">
                 <a href="#inicio" class="link-logo">
                     <img class="imagen-logo" src="assets/img/logo-vetdiagnostic.png" alt="Botón Inicio - VetDiagnostic">
@@ -22,14 +22,14 @@
             <!--Botón-->
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
-                    <div class="icono-mobile">
-                        <div class="icono-menu">
-                            <div class="linea-1"></div>
-                            <div class="linea-2"></div>
-                            <div class="linea-3"></div>
-                        </div>
+                <div class="icono-mobile">
+                    <div class="icono-menu">
+                        <div class="linea-1"></div>
+                        <div class="linea-2"></div>
+                        <div class="linea-3"></div>
                     </div>
-                </label>
+                </div>
+            </label>
 
             <nav class="navegacion" id="navegacion">
                 <ul class="enlaces">
@@ -51,23 +51,25 @@
         </div>
     </div>
 
-
-    <header>
-        <div class="header-inicio">
+    <header class="flex">
+        <div class="contenedor header-inicio">
             <div class="resultados-desktop">
                 <img src="/assets/img/resultados-icono.png" alt="">
-                <h1>Resultados</h1>
-                <p>Revisa resultados de exámenes haciendo clic en consultar</p>
+                <div class="resultados-texto">
+                    <h3>Resultados</h3>
+                    <p>Revisa resultados de exámenes haciendo clic en consultar</p>
+                </div>
+                <button class="boton relleno">Consultar ></button>
             </div>
             <div class="header-informacion">
-                <h1 class="titulo-desktop">Vet diagnostic</h1>
+                <h1 class="titulo">Vet Diagnostic</h1>
                 <p>Contacto: +56989232674</p>
             </div>
         </div>
     </header>
 
     <section class="servicios">
-        <h2>Servicios</h2>
+        <h2 class="titulos">Servicios</h2>
         <div class="examenes">
             <img src="/assets/img/servicios-examenes.png" alt="">
         </div>

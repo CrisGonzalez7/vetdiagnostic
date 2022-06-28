@@ -119,6 +119,8 @@
   }
 }
 .navbar {
+  font-family: "Swis721 BT", sans-serif;
+  font-weight: normal;
   height: 6rem;
   position: fixed;
   top: 0;
@@ -135,41 +137,41 @@
     height: 8rem;
   }
 }
-.navbar .contenedor {
+.navbar .contenedor-navbar {
   width: 90%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
 @media (min-width: 750px) {
-  .navbar .contenedor {
+  .navbar .contenedor-navbar {
     width: 100%;
   }
 }
-.navbar .contenedor #check {
+.navbar .contenedor-navbar #check {
   display: none;
 }
-.navbar .contenedor #check:checked ~ nav {
+.navbar .contenedor-navbar #check:checked ~ nav {
   left: 0;
 }
-.navbar .contenedor .checkbtn {
+.navbar .contenedor-navbar .checkbtn {
   display: block;
   height: 32px;
   width: 32px;
   margin: auto 0;
 }
 @media (min-width: 750px) {
-  .navbar .contenedor .checkbtn {
+  .navbar .contenedor-navbar .checkbtn {
     display: none;
   }
 }
-.navbar .contenedor .checkbtn .icono-mobile {
+.navbar .contenedor-navbar .checkbtn .icono-mobile {
   display: flex;
   height: 32px;
   margin: auto 0;
 }
 @media (min-width: 750px) {
-  .navbar .contenedor .checkbtn .icono-mobile {
+  .navbar .contenedor-navbar .checkbtn .icono-mobile {
     display: none;
   }
 }
@@ -219,6 +221,9 @@
 .navegacion .enlaces .enlace a.active, .navegacion .enlaces .enlace a:hover {
   color: #2E4F5D;
   transition: 0.5s;
+}
+.navegacion .enlaces .enlace a.active {
+  font-weight: 700;
 }
 
 /* Corrección del top en menú mobile animado */
@@ -312,6 +317,11 @@
   src: url(../font/swiss721-bt_bold.ttf);
   font-weight: bold;
 }
+@font-face {
+  font-family: "Chiquita";
+  src: url(../font/chiquita_normal.ttf);
+  font-weight: normal;
+}
 * {
   padding: 0;
   margin: 0;
@@ -320,27 +330,149 @@
   box-sizing: border-box;
 }
 
-nav {
+.flex {
+  display: flex;
+}
+
+.contenedor {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.boton {
+  display: block;
   font-family: "Swis721 BT", sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  width: fit-content;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+@media (min-width: 750px) {
+  .boton {
+    padding: 14px 28px;
+    font-size: 1.4rem;
+  }
+}
+.boton.transparente {
+  background-color: #F3F7F9;
+  border: solid 1px;
+  border-color: #4E869F;
+  color: #4E869F;
+}
+.boton.relleno {
+  background-color: #4E869F;
+  border: solid 1px;
+  border-color: #4E869F;
+  color: #F3F7F9;
+}
+.boton.relleno:hover {
+  background-color: #84ABBC;
+  border: solid 1px;
+  border-color: #2E4F5D;
+  color: #2E4F5D;
+}
+.boton:hover {
+  cursor: pointer;
+}
+
+.titulos {
+  font-family: "Chiquita", sans-serif;
+  font-size: 3rem;
   font-weight: normal;
+}
+@media (min-width: 750px) {
+  .titulos {
+    font-size: 3.5rem;
+  }
 }
 
 header {
-  margin-top: 200px;
+  font-family: "Swis721 BT", sans-serif;
+  margin-top: 6rem;
 }
-
-.active {
-  font-weight: 700;
+@media (min-width: 750px) {
+  header {
+    margin-top: 8rem;
+  }
 }
-
-.header-inicio {
+header .header-inicio {
   background-image: url(../img/header-inicio.png);
-  width: 90vw;
-  height: 600px;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
 }
-
-.navegacion {
-  list-style: none;
+@media (min-width: 750px) {
+  header .header-inicio {
+    height: auto;
+  }
+}
+header .header-inicio .resultados-desktop {
+  display: none;
+}
+@media (min-width: 750px) {
+  header .header-inicio .resultados-desktop {
+    display: grid;
+    grid-row-gap: 32px;
+    padding: 32px 30px;
+    margin: 40px 64px 40px auto;
+    width: 25rem;
+    height: 23.75rem;
+    background-color: #F3F7F9;
+    border-radius: 20px;
+    border: solid 1px;
+    border-color: #2E4F5D;
+    opacity: 0.9;
+  }
+}
+header .header-inicio .resultados-desktop img {
+  margin: 0 auto;
+}
+header .header-inicio .resultados-desktop .resultados-texto {
+  text-align: center;
+  color: #2E4F5D;
+}
+header .header-inicio .resultados-desktop .resultados-texto h3 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+header .header-inicio .resultados-desktop .resultados-texto p {
+  font-size: 1.4rem;
+}
+header .header-inicio .resultados-desktop button {
+  margin: 0 auto;
+}
+header .header-inicio .header-informacion {
+  margin: auto 0 0 0;
+  background-color: #6ED5F8;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+}
+@media (min-width: 750px) {
+  header .header-inicio .header-informacion {
+    padding: 21px;
+  }
+}
+header .header-inicio .header-informacion .titulo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+@media (min-width: 750px) {
+  header .header-inicio .header-informacion .titulo {
+    font-size: 1.6rem;
+  }
+}
+header .header-inicio .header-informacion p {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+@media (min-width: 750px) {
+  header .header-inicio .header-informacion p {
+    font-size: 1.4rem;
+  }
 }
 
 .examenes img,
