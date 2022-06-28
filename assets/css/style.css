@@ -210,7 +210,7 @@
 }
 .navegacion .enlaces .enlace a.active, .navegacion .enlaces .enlace a:hover {
   color: #2E4F5D;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .navegacion .enlaces .enlace a.active {
   font-weight: 700;
@@ -332,6 +332,15 @@ body {
   font-family: "Swis721 BT", sans-serif;
 }
 
+a {
+  color: #F3F7F9;
+}
+a:hover {
+  cursor: pointer;
+  color: #2E4F5D;
+  transition: 0.3s;
+}
+
 .flex {
   display: flex;
 }
@@ -434,54 +443,53 @@ header {
     margin-top: 8rem;
   }
 }
-header .header-inicio {
-  background-image: url(../img/header-inicio.png);
+header .header {
   width: 100%;
   height: 70vh;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 750px) {
-  header .header-inicio {
+  header .header {
     height: auto;
   }
 }
-header .header-inicio .resultados-desktop {
+header .header .resultados-desktop {
   display: grid;
   grid-row-gap: 32px;
   display: none;
   color: #2E4F5D;
 }
-header .header-inicio .resultados-desktop img {
+header .header .resultados-desktop img {
   margin: 0 auto;
 }
-header .header-inicio .resultados-desktop .examenes-texto {
+header .header .resultados-desktop .examenes-texto {
   text-align: center;
 }
-header .header-inicio .resultados-desktop .examenes-texto h3 {
+header .header .resultados-desktop .examenes-texto h3 {
   font-weight: bold;
   font-size: 1.5rem;
   margin-bottom: 16px;
 }
 @media (min-width: 750px) {
-  header .header-inicio .resultados-desktop .examenes-texto h3 {
+  header .header .resultados-desktop .examenes-texto h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
   }
 }
-header .header-inicio .resultados-desktop .examenes-texto p {
+header .header .resultados-desktop .examenes-texto p {
   font-size: 1.2rem;
 }
 @media (min-width: 750px) {
-  header .header-inicio .resultados-desktop .examenes-texto p {
+  header .header .resultados-desktop .examenes-texto p {
     font-size: 1.4rem;
   }
 }
-header .header-inicio .resultados-desktop button {
+header .header .resultados-desktop button {
   margin: 0 auto;
 }
 @media (min-width: 750px) {
-  header .header-inicio .resultados-desktop {
+  header .header .resultados-desktop {
     display: grid;
     padding: 32px 30px;
     margin: 40px 64px 40px auto;
@@ -494,35 +502,43 @@ header .header-inicio .resultados-desktop button {
     opacity: 0.9;
   }
 }
-header .header-inicio .header-informacion {
+header .header .header-informacion {
   margin: auto 0 0 0;
   background-color: #6ED5F8;
   width: 100%;
   text-align: center;
   padding: 15px;
+  opacity: 0.9;
 }
 @media (min-width: 750px) {
-  header .header-inicio .header-informacion {
+  header .header .header-informacion {
     padding: 21px;
   }
 }
-header .header-inicio .header-informacion .titulo {
+header .header .header-informacion .titulo {
   font-size: 1.4rem;
   font-weight: bold;
 }
 @media (min-width: 750px) {
-  header .header-inicio .header-informacion .titulo {
+  header .header .header-informacion .titulo {
     font-size: 1.6rem;
   }
 }
-header .header-inicio .header-informacion p {
+header .header .header-informacion p {
   font-size: 1.2rem;
   font-weight: normal;
 }
 @media (min-width: 750px) {
-  header .header-inicio .header-informacion p {
+  header .header .header-informacion p {
     font-size: 1.4rem;
   }
+}
+header .header-inicio {
+  background-image: url(../img/header-inicio.png);
+}
+header .header-examenes {
+  background-image: url(../img/header-examenes.png);
+  height: 80vh;
 }
 
 .servicios .contenedor .examenes-contenedor {
@@ -661,6 +677,9 @@ header .header-inicio .header-informacion p {
   margin-top: 68px;
   color: #F3F7F9;
   text-align: center;
+}
+.footer a:hover {
+  color: #6ED5F8;
 }
 .footer .contenedor100 {
   flex-direction: column;

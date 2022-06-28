@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Servicio Digital">
+    <title>VetDiagnostic - Laboratorio Clínico Veterinario</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+        <div class="contenedor100">
+            <div class="logo">
+                <a href="#inicio" class="link-logo">
+                    <img class="imagen-logo" src="assets/img/logo-vetdiagnostic.png" alt="Botón Inicio - VetDiagnostic">
+                </a>
+            </div>
+
+            <!--Botón-->
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <div class="icono-mobile">
+                    <div class="icono-menu">
+                        <div class="linea-1"></div>
+                        <div class="linea-2"></div>
+                        <div class="linea-3"></div>
+                    </div>
+                </div>
+            </label>
+
+            <nav class="navegacion" id="navegacion">
+                <ul class="enlaces">
+                    <li class="enlace">
+                        <a href="#inicio">Inicio</a>
+                    </li>
+                    <li class="enlace submenu-padre">
+                        <a class="active" href="#">Servicios <span class="iconify icono-submenu" data-icon="ant-design:caret-down-filled"></span></a>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="https://app.veterlink.com/LaboratorioControllerPublico/index/vet_diagnostic" target="_blank">Resultados exámenes</a></li>
+                            <li><a class="active" href="/examenes.html">Listado de exámenes</a></li>
+                        </ul>
+                    </li>
+                    <li class="enlace">
+                        <a href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <header class="flex">
+        <div class="contenedor header header-examenes">
+            <div class="header-informacion">
+                <h1 class="titulo">Vet Diagnostic</h1>
+                <p>Contacto: +56989232674</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="servicios-examenes flex">
+        <div class="contenedor">
+            <h2 class="titulos">Listado de exámenes</h2>
+        </div>
+    </section>
+
+    <section class="contacto flex">
+        <div class="contenedor">
+            <h2 class="titulos">Contacto</h2>
+            <div class="ubicacion-contenedor">
+                <div class="ubicacion">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.747976730353!2d-71.25619271843391!3d-32.87838692389413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689cd907778281f%3A0xc61fa4d9e16012f8!2sManuel%20Bulnes%20109%2C%20Quillota%2C%202260454%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1656287574324!5m2!1ses-419!2scl"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="ubicacion">
+                    <div class="texto-ubicacion">
+                        <p><b>Manuel Bulnes #109, Quillota</b><br>Lunes a Sabado <b>10:00</b> a <b>16:00 hrs</b> <br><br>lab@vetdiagnostic.cl <br><b>+56989232674</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Insertar icono WhatsApp flotante-->
+    <footer class="footer">
+        <div class="contenedor100">
+            <div class="creditos">
+                <p>Sitio desarrollado por: <br>
+                    <a href="https://serviciodigital.cl/"><b>ServicioDigital</b></a></p>
+            </div>
+            <div class="iconos-sociales">
+                <a href="https://www.facebook.com/laboratoriovetdiagnostic" target="_blank"><span class="iconify" data-icon="icon-park-outline:facebook-one" data-width="24"></span></a>
+                <a href="https://www.instagram.com/vetdiagnostic/" target="_blank"><span class="iconify" data-icon="bi:instagram" data-width="24"></span></a>
+                <a href="https://wa.me/56989232674" target="_blank" rel="nofollow"><span class="iconify" data-icon="akar-icons:whatsapp-fill" data-width="24"></span></a>
+            </div>
+            <div class="ubicacion-footer">
+                <span class="iconify" data-icon="carbon:location-filled"></span> Quillota, Chile
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

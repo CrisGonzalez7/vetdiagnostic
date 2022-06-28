@@ -52,6 +52,15 @@ body {
     font-family: 'Swis721 BT', sans-serif;
 }
 
+a {
+    color: $blanco;
+    &:hover {
+        cursor: pointer;
+        color: $azul-oscuro;
+        transition: .3s;
+    }
+}
+
 .flex {
     display: flex;
 }
@@ -176,8 +185,7 @@ header {
     @media (min-width: 750px) {
         margin-top: 8rem;
     }
-    .header-inicio {
-        background-image: url(../img/header-inicio.png);
+    .header {
         width: 100%;
         height: 70vh;
         display: flex;
@@ -208,6 +216,7 @@ header {
             width: 100%;
             text-align: center;
             padding: 15px;
+            opacity: 0.9;
             @media (min-width: 750px) {
                 padding: 21px;
             }
@@ -226,6 +235,13 @@ header {
                 }
             }
         }
+    }
+    .header-inicio {
+        background-image: url(../img/header-inicio.png);
+    }
+    .header-examenes {
+        background-image: url(../img/header-examenes.png);
+        height: 80vh;
     }
 }
 
@@ -330,6 +346,9 @@ header {
     margin-top: 68px;
     color: $blanco;
     text-align: center;
+    a:hover {
+        color: $celeste;
+    }
     .contenedor100 {
         flex-direction: column;
         padding: 32px 0;
@@ -370,3 +389,5 @@ header {
         }
     }
 }
+
+.servicios-examenes {}
