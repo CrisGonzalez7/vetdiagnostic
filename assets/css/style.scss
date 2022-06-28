@@ -33,6 +33,7 @@
 $negro: #35353F;
 $blanco: #F3F7F9;
 $azul: #4E869F;
+$azul-claro: #BED5DF;
 $azul-oscuro: #2E4F5D;
 $azul-boton: #84ABBC;
 $celeste: #6ED5F8;
@@ -47,12 +48,16 @@ $celeste: #6ED5F8;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Swis721 BT', sans-serif;
+}
+
 .flex {
     display: flex;
 }
 
 .contenedor {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     @media (min-width: 750px) {
         max-width: 1200px;
@@ -156,7 +161,6 @@ $celeste: #6ED5F8;
 /* Secciones */
 
 header {
-    font-family: 'Swis721 BT', sans-serif;
     margin-top: 6rem;
     color: $negro;
     @media (min-width: 750px) {
@@ -218,7 +222,6 @@ header {
 .servicios {
     .contenedor {
         .examenes-contenedor {
-            font-family: 'Swis721 BT', sans-serif;
             display: grid;
             text-align: center;
             color: $negro;
@@ -263,6 +266,45 @@ header {
                 display: none;
                 @media (min-width: 750px) {
                     display: block;
+                }
+            }
+        }
+    }
+}
+
+.contacto {
+    .contenedor {
+        @media (min-width: 750px) {
+            flex-direction: column;
+        }
+        .ubicacion-contenedor {
+            display: grid;
+            @media (min-width: 750px) {
+                grid-template-columns: 50% 50%;
+            }
+            .ubicacion {
+                background-color: $azul-claro;
+                height: 220px;
+                box-shadow: 4px 4px 8px #CDCDCD;
+                @media (min-width: 750px) {
+                    height: 320px;
+                }
+                iframe {
+                    max-width: 100%;
+                    border: 0;
+                    height: 100%;
+                }
+                .texto-ubicacion {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    margin: auto;
+                    text-align: center;
+                    padding: 24px;
+                    font-size: 1.1rem;
+                    p {
+                        margin: auto;
+                    }
                 }
             }
         }
