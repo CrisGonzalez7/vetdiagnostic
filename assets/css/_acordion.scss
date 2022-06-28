@@ -1,24 +1,30 @@
+$negro: #35353F;
+$blanco: #F3F7F9;
+$azul: #4E869F;
+$azul-claro: #BED5DF;
+$azul-oscuro: #2E4F5D;
+$azul-boton: #84ABBC;
+$celeste: #6ED5F8;
 .bloque-acordion {
     .accordion {
-        background-color: #eee;
-        color: #444;
+        background-color: $azul-oscuro;
+        color: $blanco;
         cursor: pointer;
         padding: 18px;
         width: 100%;
         border: none;
         text-align: left;
         outline: none;
-        font-size: 15px;
+        font-size: 1.4rem;
         transition: 0.4s;
     }
     .active,
     .accordion:hover {
-        background-color: #ccc;
+        background-color: $azul;
     }
     .accordion:after {
         content: '\002B';
-        color: #777;
-        font-weight: bold;
+        color: $blanco;
         float: right;
         margin-left: 5px;
     }
@@ -27,7 +33,7 @@
     }
     .panel {
         padding: 0 18px;
-        background-color: white;
+        background-color: $azul-claro;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
