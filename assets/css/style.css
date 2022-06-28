@@ -138,41 +138,30 @@
     height: 8rem;
   }
 }
-.navbar .contenedor-navbar {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-@media (min-width: 750px) {
-  .navbar .contenedor-navbar {
-    width: 100%;
-  }
-}
-.navbar .contenedor-navbar #check {
+.navbar .contenedor100 #check {
   display: none;
 }
-.navbar .contenedor-navbar #check:checked ~ nav {
+.navbar .contenedor100 #check:checked ~ nav {
   left: 0;
 }
-.navbar .contenedor-navbar .checkbtn {
+.navbar .contenedor100 .checkbtn {
   display: block;
   height: 32px;
   width: 32px;
   margin: auto 0;
 }
 @media (min-width: 750px) {
-  .navbar .contenedor-navbar .checkbtn {
+  .navbar .contenedor100 .checkbtn {
     display: none;
   }
 }
-.navbar .contenedor-navbar .checkbtn .icono-mobile {
+.navbar .contenedor100 .checkbtn .icono-mobile {
   display: flex;
   height: 32px;
   margin: auto 0;
 }
 @media (min-width: 750px) {
-  .navbar .contenedor-navbar .checkbtn .icono-mobile {
+  .navbar .contenedor100 .checkbtn .icono-mobile {
     display: none;
   }
 }
@@ -199,7 +188,7 @@
 }
 @media (min-width: 750px) {
   .navegacion .enlaces {
-    margin: auto 40px auto auto;
+    margin: auto 0px auto auto;
     text-align: right;
     font-size: 1.4rem;
   }
@@ -354,6 +343,18 @@ body {
 @media (min-width: 750px) {
   .contenedor {
     max-width: 1200px;
+  }
+}
+
+.contenedor100 {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+@media (min-width: 750px) {
+  .contenedor100 {
+    width: 95%;
   }
 }
 
@@ -635,6 +636,7 @@ header .header-inicio .header-informacion p {
   max-width: 100%;
   border: 0;
   height: 100%;
+  width: 100%;
 }
 .contacto .contenedor .ubicacion-contenedor .ubicacion .texto-ubicacion {
   display: flex;
@@ -645,12 +647,67 @@ header .header-inicio .header-informacion p {
   padding: 24px;
   font-size: 1.1rem;
 }
+@media (min-width: 750px) {
+  .contacto .contenedor .ubicacion-contenedor .ubicacion .texto-ubicacion {
+    font-size: 1.2rem;
+  }
+}
 .contacto .contenedor .ubicacion-contenedor .ubicacion .texto-ubicacion p {
   margin: auto;
 }
 
-.ubicacion iframe {
-  width: 90vw;
+.footer {
+  background-color: #2E4F5D;
+  margin-top: 68px;
+  color: #F3F7F9;
+  text-align: center;
+}
+.footer .contenedor100 {
+  flex-direction: column;
+  padding: 32px 0;
+}
+@media (min-width: 750px) {
+  .footer .contenedor100 {
+    flex-direction: row;
+  }
+}
+.footer .contenedor100 .creditos {
+  order: 2;
+  margin-bottom: 20px;
+}
+@media (min-width: 750px) {
+  .footer .contenedor100 .creditos {
+    margin: 0;
+    order: 0;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+}
+.footer .contenedor100 .iconos-sociales {
+  margin-top: 20px;
+}
+@media (min-width: 750px) {
+  .footer .contenedor100 .iconos-sociales {
+    margin-top: 0;
+  }
+}
+.footer .contenedor100 .iconos-sociales .iconify {
+  width: 24px;
+  margin: 0 10px;
+}
+.footer .contenedor100 .ubicacion-footer {
+  margin: 24px 0;
+}
+@media (min-width: 750px) {
+  .footer .contenedor100 .ubicacion-footer {
+    margin: 0;
+    text-align: right;
+    font-size: 1rem;
+  }
+}
+.footer .contenedor100 .ubicacion-footer .iconify {
+  color: #6ED5F8;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

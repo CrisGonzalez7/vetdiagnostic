@@ -18,14 +18,7 @@ $azul-oscuro: #2E4F5D;
     @media (min-width: 750px) {
         height: 8rem;
     }
-    .contenedor-navbar {
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto;
-        @media (min-width: 750px) {
-            width: 100%;
-        }
+    .contenedor100 {
         #check {
             display: none;
         }
@@ -71,7 +64,7 @@ $azul-oscuro: #2E4F5D;
     .enlaces {
         font-size: 1.2rem;
         @media (min-width: 750px) {
-            margin: auto 40px auto auto;
+            margin: auto 0px auto auto;
             text-align: right;
             font-size: 1.4rem;
         }

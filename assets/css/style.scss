@@ -64,6 +64,16 @@ body {
     }
 }
 
+.contenedor100 {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    @media (min-width: 750px) {
+        width: 95%;
+    }
+}
+
 .titulos {
     font-family: 'Chiquita', sans-serif;
     font-size: 3rem;
@@ -293,6 +303,7 @@ header {
                     max-width: 100%;
                     border: 0;
                     height: 100%;
+                    width: 100%;
                 }
                 .texto-ubicacion {
                     display: flex;
@@ -302,6 +313,9 @@ header {
                     text-align: center;
                     padding: 24px;
                     font-size: 1.1rem;
+                    @media (min-width: 750px) {
+                        font-size: 1.2rem;
+                    }
                     p {
                         margin: auto;
                     }
@@ -311,6 +325,48 @@ header {
     }
 }
 
-.ubicacion iframe {
-    width: 90vw;
+.footer {
+    background-color: $azul-oscuro;
+    margin-top: 68px;
+    color: $blanco;
+    text-align: center;
+    .contenedor100 {
+        flex-direction: column;
+        padding: 32px 0;
+        @media (min-width: 750px) {
+            flex-direction: row;
+        }
+        .creditos {
+            order: 2;
+            margin-bottom: 20px;
+            @media (min-width: 750px) {
+                margin: 0;
+                order: 0;
+                text-align: left;
+                font-size: 0.9rem;
+            }
+        }
+        .iconos-sociales {
+            margin-top: 20px;
+            @media (min-width: 750px) {
+                margin-top: 0;
+            }
+            .iconify {
+                width: 24px;
+                margin: 0 10px;
+            }
+        }
+        .ubicacion-footer {
+            margin: 24px 0;
+            @media (min-width: 750px) {
+                margin: 0;
+                text-align: right;
+                font-size: 1rem;
+            }
+            .iconify {
+                color: $celeste;
+                font-size: 1rem;
+            }
+        }
+    }
 }
