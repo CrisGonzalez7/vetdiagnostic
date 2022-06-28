@@ -111,10 +111,21 @@ $azul-oscuro: #2E4F5D;
         display: block;
         position: fixed;
         right: 100px;
-        background-color: red;
+        background-color: $blanco;
     }
     li.activo>ul>li {
         padding: 0 40px;
+    }
+    .icono-submenu {
+        position: absolute;
+        margin-top: 6px;
+        margin-left: 10px;
+        @media (min-width: 750px) {
+            margin-top: 30px;
+        }
+    }
+    li.activo>a>.icono-submenu {
+        transform: translateY(0) rotate(180deg);
     }
 }
 

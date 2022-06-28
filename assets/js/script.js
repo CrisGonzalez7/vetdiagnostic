@@ -39,9 +39,21 @@ elementoMenu.addEventListener('click', function(event) {
     elementoMenu.classList.toggle('activo');
 });
 
-// Submenu desplegable
-let menuPadre = document.getElementsByClassName('enlace')[1];
+// Submenu desplegable, se obtienen todos los enlaces como un listado HTMLCollection
+let menuPadre = document.getElementsByClassName('enlace');
 
-menuPadre.addEventListener('click', function(event) {
-    menuPadre.classList.toggle('activo');
+// Se recorre uno por uno los elementos y se le agrega un listener para el click
+for (var i = 0; i < menuPadre.length; i++) {
+    menuPadre[i].addEventListener('click', function(event) {
+        this.classList.toggle('activo');
+    });
+}
+
+
+
+// Animación Ícono Submenú
+let iconoSubmenu = document.getElementsByClassName('icono-submenu')[0];
+
+iconoSubmenu.addEventListener('click', function(event) {
+    iconoSubmenu.classList.toggle('activo');
 });
