@@ -297,6 +297,40 @@
   }
 }
 
+.bloque-acordion .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.bloque-acordion .active,
+.bloque-acordion .accordion:hover {
+  background-color: #ccc;
+}
+.bloque-acordion .accordion:after {
+  content: "+";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.bloque-acordion .active:after {
+  content: "−";
+}
+.bloque-acordion .panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
 /* Fuentes */
 @font-face {
   font-family: "Swis721 BT";
