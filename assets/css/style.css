@@ -578,8 +578,10 @@ header .header-inicio .header-informacion p {
     display: block;
   }
 }
-.servicios .contenedor .examenes-contenedor .listado-examenes img {
-  display: none;
+@media (min-width: 750px) {
+  .servicios .contenedor .examenes-contenedor .listado-examenes img {
+    display: none;
+  }
 }
 @media (min-width: 750px) {
   .servicios .contenedor .examenes-contenedor .listado-examenes .examenes-texto h3 {
