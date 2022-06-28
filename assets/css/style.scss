@@ -1,5 +1,8 @@
 @use 'icono-menu';
 @use 'navbar';
+
+/* Fuentes */
+
 @font-face {
     font-family: 'Swis721 BT';
     src: url(../font/swiss721-bt_roman.ttf);
@@ -18,12 +21,18 @@
     font-weight: normal;
 }
 
+
+/* Variables */
+
 $negro: #35353F;
 $blanco: #F3F7F9;
 $azul: #4E869F;
 $azul-oscuro: #2E4F5D;
 $azul-boton: #84ABBC;
 $celeste: #6ED5F8;
+
+/* Globales */
+
 * {
     padding: 0;
     margin: 0;
@@ -37,8 +46,31 @@ $celeste: #6ED5F8;
 }
 
 .contenedor {
+    width: 90%;
     margin: 0 auto;
-    max-width: 1200px;
+    @media (min-width: 750px) {
+        max-width: 1200px;
+    }
+}
+
+.titulos {
+    font-family: 'Chiquita', sans-serif;
+    font-size: 3rem;
+    font-weight: normal;
+    color: $negro;
+    @media (min-width: 750px) {
+        font-size: 3.5rem;
+    }
+}
+
+.contenedor {
+    .titulos {
+        text-align: center;
+        margin: 40px 0;
+        @media (min-width: 750px) {
+            margin: 68px 0;
+        }
+    }
 }
 
 .boton {
@@ -58,6 +90,12 @@ $celeste: #6ED5F8;
         border: solid 1px;
         border-color: $azul;
         color: $azul;
+        &:hover {
+            background-color: $azul;
+            border: solid 1px;
+            border-color: $azul;
+            color: $blanco;
+        }
     }
     &.relleno {
         background-color: $azul;
@@ -76,18 +114,45 @@ $celeste: #6ED5F8;
     }
 }
 
-.titulos {
-    font-family: 'Chiquita', sans-serif;
-    font-size: 3rem;
-    font-weight: normal;
-    @media (min-width: 750px) {
-        font-size: 3.5rem;
+
+/* Mixins */
+
+@mixin resultados-examenes {
+    display: grid;
+    grid-row-gap: 32px;
+    img {
+        margin: 0 auto;
+    }
+    .examenes-texto {
+        text-align: center;
+        h3 {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            @media (min-width: 750px) {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            font-size: 1.2rem;
+            @media (min-width: 750px) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    button {
+        margin: 0 auto;
     }
 }
+
+
+/* Secciones */
 
 header {
     font-family: 'Swis721 BT', sans-serif;
     margin-top: 6rem;
+    color: $negro;
     @media (min-width: 750px) {
         margin-top: 8rem;
     }
@@ -101,10 +166,11 @@ header {
             height: auto;
         }
         .resultados-desktop {
+            @include resultados-examenes();
             display: none;
+            color: $azul-oscuro;
             @media (min-width: 750px) {
                 display: grid;
-                grid-row-gap: 32px;
                 padding: 32px 30px;
                 margin: 40px 64px 40px auto;
                 width: 25rem;
@@ -114,24 +180,6 @@ header {
                 border: solid 1px;
                 border-color: $azul-oscuro;
                 opacity: 0.9;
-            }
-            img {
-                margin: 0 auto;
-            }
-            .resultados-texto {
-                text-align: center;
-                color: $azul-oscuro;
-                h3 {
-                    font-weight: bold;
-                    font-size: 1.8rem;
-                    margin-bottom: 10px;
-                }
-                p {
-                    font-size: 1.4rem;
-                }
-            }
-            button {
-                margin: 0 auto;
             }
         }
         .header-informacion {
@@ -161,7 +209,32 @@ header {
     }
 }
 
-.examenes img,
+.servicios {
+    .contenedor {
+        .examenes-contenedor {
+            display: grid;
+            text-align: center;
+            color: $negro;
+            .examenes {
+                @include resultados-examenes();
+                @media (min-width: 750px) {
+                    display: none;
+                }
+            }
+            .listado-examenes {
+                display: grid;
+                margin: 48px 0 24px;
+            }
+            .img-servicios-examenes {
+                display: none;
+                @media (min-width: 750px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
 .ubicacion iframe {
     width: 90vw;
 }

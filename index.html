@@ -55,7 +55,7 @@
         <div class="contenedor header-inicio">
             <div class="resultados-desktop">
                 <img src="/assets/img/resultados-icono.png" alt="">
-                <div class="resultados-texto">
+                <div class="examenes-texto">
                     <h3>Resultados</h3>
                     <p>Revisa resultados de exámenes haciendo clic en consultar</p>
                 </div>
@@ -68,14 +68,28 @@
         </div>
     </header>
 
-    <section class="servicios">
-        <h2 class="titulos">Servicios</h2>
-        <div class="examenes">
-            <img src="/assets/img/servicios-examenes.png" alt="">
-        </div>
-        <div class="examenes">
-            <h3>Exámenes <img src="/assets/img/examenes-icono.png" alt=""></h3>
-            <p>Conoce el listado de exámenes que realizamos en nuestra sucursal</p>
+    <section class="servicios flex">
+        <div class="contenedor">
+            <h2 class="titulos">Servicios</h2>
+            <div class="examenes-contenedor">
+                <div class="examenes">
+                    <img src="/assets/img/resultados-icono.png" alt="">
+                    <div class="examenes-texto">
+                        <h3>Resultados</h3>
+                        <p>Revisa resultados de exámenes haciendo clic en consultar</p>
+                    </div>
+                    <button class="boton transparente">Consultar ></button>
+                </div>
+                <div class="examenes listado-examenes">
+                    <img class="img-servicios-examenes" src="/assets/img/servicios-examenes.png" alt="">
+                    <img src="/assets/img/examenes-icono.png" alt="">
+                    <div class="examenes-texto">
+                        <h3>Exámenes</h3>
+                        <p>Conoce el listado de exámenes que realizamos en nuestra sucursal</p>
+                    </div>
+                    <button class="boton transparente">Ver listado ></button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -93,6 +107,7 @@
         </div>
     </section>
 
+    <!--Insertar icono WhatsApp flotante-->
     <footer>
         <div class="creditos">
             <p>Sitio desarrollado por: <br><b>ServicioDigital</b></p>

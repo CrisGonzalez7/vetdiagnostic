@@ -119,6 +119,7 @@
   }
 }
 .navbar {
+  color: #35353F;
   font-family: "Swis721 BT", sans-serif;
   font-weight: normal;
   height: 6rem;
@@ -307,6 +308,7 @@
   }
 }
 
+/* Fuentes */
 @font-face {
   font-family: "Swis721 BT";
   src: url(../font/swiss721-bt_roman.ttf);
@@ -322,6 +324,8 @@
   src: url(../font/chiquita_normal.ttf);
   font-weight: normal;
 }
+/* Variables */
+/* Globales */
 * {
   padding: 0;
   margin: 0;
@@ -335,8 +339,35 @@
 }
 
 .contenedor {
+  width: 90%;
   margin: 0 auto;
-  max-width: 1200px;
+}
+@media (min-width: 750px) {
+  .contenedor {
+    max-width: 1200px;
+  }
+}
+
+.titulos {
+  font-family: "Chiquita", sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  color: #35353F;
+}
+@media (min-width: 750px) {
+  .titulos {
+    font-size: 3.5rem;
+  }
+}
+
+.contenedor .titulos {
+  text-align: center;
+  margin: 40px 0;
+}
+@media (min-width: 750px) {
+  .contenedor .titulos {
+    margin: 68px 0;
+  }
 }
 
 .boton {
@@ -360,6 +391,12 @@
   border-color: #4E869F;
   color: #4E869F;
 }
+.boton.transparente:hover {
+  background-color: #4E869F;
+  border: solid 1px;
+  border-color: #4E869F;
+  color: #F3F7F9;
+}
 .boton.relleno {
   background-color: #4E869F;
   border: solid 1px;
@@ -376,20 +413,12 @@
   cursor: pointer;
 }
 
-.titulos {
-  font-family: "Chiquita", sans-serif;
-  font-size: 3rem;
-  font-weight: normal;
-}
-@media (min-width: 750px) {
-  .titulos {
-    font-size: 3.5rem;
-  }
-}
-
+/* Mixins */
+/* Secciones */
 header {
   font-family: "Swis721 BT", sans-serif;
   margin-top: 6rem;
+  color: #35353F;
 }
 @media (min-width: 750px) {
   header {
@@ -409,12 +438,42 @@ header .header-inicio {
   }
 }
 header .header-inicio .resultados-desktop {
+  display: grid;
+  grid-row-gap: 32px;
   display: none;
+  color: #2E4F5D;
+}
+header .header-inicio .resultados-desktop img {
+  margin: 0 auto;
+}
+header .header-inicio .resultados-desktop .examenes-texto {
+  text-align: center;
+}
+header .header-inicio .resultados-desktop .examenes-texto h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+@media (min-width: 750px) {
+  header .header-inicio .resultados-desktop .examenes-texto h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+}
+header .header-inicio .resultados-desktop .examenes-texto p {
+  font-size: 1.2rem;
+}
+@media (min-width: 750px) {
+  header .header-inicio .resultados-desktop .examenes-texto p {
+    font-size: 1.4rem;
+  }
+}
+header .header-inicio .resultados-desktop button {
+  margin: 0 auto;
 }
 @media (min-width: 750px) {
   header .header-inicio .resultados-desktop {
     display: grid;
-    grid-row-gap: 32px;
     padding: 32px 30px;
     margin: 40px 64px 40px auto;
     width: 25rem;
@@ -425,24 +484,6 @@ header .header-inicio .resultados-desktop {
     border-color: #2E4F5D;
     opacity: 0.9;
   }
-}
-header .header-inicio .resultados-desktop img {
-  margin: 0 auto;
-}
-header .header-inicio .resultados-desktop .resultados-texto {
-  text-align: center;
-  color: #2E4F5D;
-}
-header .header-inicio .resultados-desktop .resultados-texto h3 {
-  font-weight: bold;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-header .header-inicio .resultados-desktop .resultados-texto p {
-  font-size: 1.4rem;
-}
-header .header-inicio .resultados-desktop button {
-  margin: 0 auto;
 }
 header .header-inicio .header-informacion {
   margin: auto 0 0 0;
@@ -475,7 +516,61 @@ header .header-inicio .header-informacion p {
   }
 }
 
-.examenes img,
+.servicios .contenedor .examenes-contenedor {
+  display: grid;
+  text-align: center;
+  color: #35353F;
+}
+.servicios .contenedor .examenes-contenedor .examenes {
+  display: grid;
+  grid-row-gap: 32px;
+}
+.servicios .contenedor .examenes-contenedor .examenes img {
+  margin: 0 auto;
+}
+.servicios .contenedor .examenes-contenedor .examenes .examenes-texto {
+  text-align: center;
+}
+.servicios .contenedor .examenes-contenedor .examenes .examenes-texto h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+@media (min-width: 750px) {
+  .servicios .contenedor .examenes-contenedor .examenes .examenes-texto h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+}
+.servicios .contenedor .examenes-contenedor .examenes .examenes-texto p {
+  font-size: 1.2rem;
+}
+@media (min-width: 750px) {
+  .servicios .contenedor .examenes-contenedor .examenes .examenes-texto p {
+    font-size: 1.4rem;
+  }
+}
+.servicios .contenedor .examenes-contenedor .examenes button {
+  margin: 0 auto;
+}
+@media (min-width: 750px) {
+  .servicios .contenedor .examenes-contenedor .examenes {
+    display: none;
+  }
+}
+.servicios .contenedor .examenes-contenedor .listado-examenes {
+  display: grid;
+  margin: 48px 0 24px;
+}
+.servicios .contenedor .examenes-contenedor .img-servicios-examenes {
+  display: none;
+}
+@media (min-width: 750px) {
+  .servicios .contenedor .examenes-contenedor .img-servicios-examenes {
+    display: block;
+  }
+}
+
 .ubicacion iframe {
   width: 90vw;
 }
