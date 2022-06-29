@@ -301,7 +301,7 @@
   background-color: #2E4F5D;
   color: #F3F7F9;
   cursor: pointer;
-  padding: 18px;
+  padding: 16px 0 16px 48px;
   width: 100%;
   border: none;
   text-align: left;
@@ -317,21 +317,37 @@
   content: "+";
   color: #F3F7F9;
   float: right;
-  margin-left: 5px;
+  margin-right: 48px;
 }
 .bloque-acordion .active:after {
   content: "−";
 }
 .bloque-acordion .panel {
-  padding: 0 18px;
+  padding: 0px 56px;
   background-color: #BED5DF;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  font-size: 1.4rem;
+  color: #35353F;
 }
 .bloque-acordion .panel .detalle-examen {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 12px;
+}
+.bloque-acordion .panel .detalle-examen:first-child {
+  padding-top: 20px;
+}
+.bloque-acordion .panel .detalle-examen:last-child {
+  padding-bottom: 20px;
+}
+.bloque-acordion .panel .boton-reservar {
+  display: flex;
+  margin-bottom: 28px;
+}
+.bloque-acordion .panel .boton-reservar a {
+  margin: 0 auto;
 }
 
 /* Fuentes */

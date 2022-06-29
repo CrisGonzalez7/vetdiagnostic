@@ -10,7 +10,7 @@ $celeste: #6ED5F8;
         background-color: $azul-oscuro;
         color: $blanco;
         cursor: pointer;
-        padding: 18px;
+        padding: 16px 0 16px 48px;
         width: 100%;
         border: none;
         text-align: left;
@@ -26,20 +26,36 @@ $celeste: #6ED5F8;
         content: '\002B';
         color: $blanco;
         float: right;
-        margin-left: 5px;
+        margin-right: 48px;
     }
     .active:after {
         content: "\2212";
     }
     .panel {
-        padding: 0 18px;
+        padding: 0px 56px;
         background-color: $azul-claro;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
+        font-size: 1.4rem;
+        color: $negro;
         .detalle-examen {
             display: flex;
             justify-content: space-between;
+            margin-bottom: 12px;
+            &:first-child {
+                padding-top: 20px;
+            }
+            &:last-child {
+                padding-bottom: 20px;
+            }
+        }
+        .boton-reservar {
+            display: flex;
+            margin-bottom: 28px;
+            a {
+                margin: 0 auto;
+            }
         }
     }
 }
