@@ -10,13 +10,17 @@ $celeste: #6ED5F8;
         background-color: $azul-oscuro;
         color: $blanco;
         cursor: pointer;
-        padding: 16px 0 16px 48px;
+        padding: 10px 0px 10px 16px;
         width: 100%;
         border: none;
         text-align: left;
         outline: none;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         transition: 0.4s;
+        @media (min-width: 750px) {
+            padding: 16px 0 16px 48px;
+            font-size: 1.4rem;
+        }
     }
     .active,
     .accordion:hover {
@@ -26,33 +30,49 @@ $celeste: #6ED5F8;
         content: '\002B';
         color: $blanco;
         float: right;
-        margin-right: 48px;
+        margin-right: 12px;
+        @media (min-width: 750px) {
+            margin-right: 48px;
+        }
     }
     .active:after {
         content: "\2212";
     }
     .panel {
-        padding: 0px 56px;
+        padding: 0px 8px;
         background-color: $azul-claro;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         color: $negro;
+        @media (min-width: 750px) {
+            font-size: 1.4rem;
+            padding: 0px 56px;
+        }
         .detalle-examen {
             display: flex;
             justify-content: space-between;
             margin-bottom: 12px;
             &:first-child {
-                padding-top: 20px;
+                padding-top: 12px;
+                @media (min-width: 750px) {
+                    padding-top: 20px;
+                }
             }
             &:last-child {
                 padding-bottom: 20px;
             }
+            .nombre {
+                max-width: 75%;
+                @media (min-width: 750px) {
+                    max-width: 90%;
+                }
+            }
         }
         .boton-reservar {
             display: flex;
-            margin-bottom: 28px;
+            margin: 18px 0 28px;
             a {
                 margin: 0 auto;
             }
