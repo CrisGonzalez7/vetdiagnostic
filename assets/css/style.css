@@ -308,12 +308,18 @@
   outline: none;
   font-size: 1.2rem;
   transition: 0.4s;
+  margin-top: 1.5rem;
+  border-radius: 5px;
 }
 @media (min-width: 750px) {
   .bloque-acordion .accordion {
     padding: 16px 0 16px 48px;
     font-size: 1.4rem;
+    margin-top: 1.8rem;
   }
+}
+.bloque-acordion .accordion:first-child {
+  margin-top: 0;
 }
 .bloque-acordion .active,
 .bloque-acordion .accordion:hover {
@@ -364,13 +370,8 @@
 .bloque-acordion .panel .detalle-examen:last-child {
   padding-bottom: 20px;
 }
-.bloque-acordion .panel .detalle-examen .nombre {
-  max-width: 75%;
-}
-@media (min-width: 750px) {
-  .bloque-acordion .panel .detalle-examen .nombre {
-    max-width: 90%;
-  }
+.bloque-acordion .panel .detalle-examen .precio {
+  display: none;
 }
 .bloque-acordion .panel .boton-reservar {
   display: flex;
@@ -528,13 +529,36 @@ header {
 }
 header .header {
   width: 100%;
-  height: 70vh;
+  height: 16rem;
   display: flex;
   flex-direction: column;
+  background-size: 120%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 350px) {
+  header .header {
+    height: 18rem;
+  }
+}
+@media (min-width: 400px) {
+  header .header {
+    height: 20rem;
+  }
+}
+@media (min-width: 480px) {
+  header .header {
+    height: 23rem;
+  }
+}
+@media (min-width: 550px) {
+  header .header {
+    height: 25rem;
+  }
 }
 @media (min-width: 750px) {
   header .header {
     height: auto;
+    background-size: 100%;
   }
 }
 header .header .resultados-desktop {
@@ -591,11 +615,11 @@ header .header .header-informacion {
   width: 100%;
   text-align: center;
   padding: 15px;
-  opacity: 0.9;
 }
 @media (min-width: 750px) {
   header .header .header-informacion {
     padding: 21px;
+    opacity: 0.9;
   }
 }
 header .header .header-informacion .titulo {
@@ -618,10 +642,30 @@ header .header .header-informacion p {
 }
 header .header-inicio {
   background-image: url(../img/header-inicio.png);
+  background-position-x: -3rem;
+}
+@media (min-width: 400px) {
+  header .header-inicio {
+    background-position-x: -4.5rem;
+  }
+}
+@media (min-width: 550px) {
+  header .header-inicio {
+    background-position-x: -6rem;
+  }
+}
+@media (min-width: 750px) {
+  header .header-inicio {
+    background-position-x: 0rem;
+  }
 }
 header .header-examenes {
   background-image: url(../img/header-examenes.png);
-  height: 80vh;
+}
+@media (min-width: 750px) {
+  header .header-examenes {
+    height: 80vh;
+  }
 }
 
 .servicios .contenedor .examenes-contenedor {
