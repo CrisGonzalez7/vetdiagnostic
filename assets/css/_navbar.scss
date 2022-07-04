@@ -54,12 +54,12 @@ $azul-oscuro: #2E4F5D;
     background: $blanco;
     top: 6rem;
     left: 100%;
-    text-align: center;
     transition: all .5s;
     z-index: 10;
     @media (min-width: 750px) {
         position: inherit;
         display: flex;
+        text-align: center;
     }
     .enlaces {
         font-size: 1.2rem;
@@ -69,13 +69,21 @@ $azul-oscuro: #2E4F5D;
             font-size: 1.4rem;
         }
         .enlace {
-            margin: 50px 0;
+            padding: 25px 0 25px 40px;
             line-height: 30px;
+            border-top: solid 0.1px #58585B;
             @media (min-width: 750px) {
-                padding-left: 80px;
+                padding: 0 0 0 80px;
                 display: inline-block;
                 line-height: 80px;
                 margin: 0 5px;
+                border: none;
+            }
+            &:last-child {
+                border-bottom: solid 0.1px #58585B;
+                @media (min-width: 750px) {
+                    border: none;
+                }
             }
             a {
                 color: $negro;
@@ -130,6 +138,9 @@ $azul-oscuro: #2E4F5D;
     }
     .submenu li {
         margin: 1.2rem 0;
+        &:last-child {
+            margin: 0;
+        }
     }
 }
 
