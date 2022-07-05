@@ -869,4 +869,20 @@ header .header-examenes {
   font-size: 1rem;
 }
 
+.clase-opacity {
+  opacity: 0.3;
+}
+
+/* WhatsApp Flotante */
+.whatsapp-flotante {
+  position: fixed;
+  top: 80vh;
+  right: 20px;
+}
+@media (min-width: 750px) {
+  .whatsapp-flotante {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
