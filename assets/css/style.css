@@ -368,8 +368,7 @@
   }
 }
 .bloque-acordion .panel .detalle-examen {
-  display: flex;
-  justify-content: space-between;
+  display: block;
   margin-bottom: 12px;
 }
 .bloque-acordion .panel .detalle-examen:first-child {
@@ -878,11 +877,6 @@ header .header-examenes {
   position: fixed;
   top: 80vh;
   right: 20px;
-}
-@media (min-width: 750px) {
-  .whatsapp-flotante {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

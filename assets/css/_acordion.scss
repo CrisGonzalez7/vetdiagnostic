@@ -57,8 +57,7 @@ $celeste: #6ED5F8;
             padding: 0px 56px;
         }
         .detalle-examen {
-            display: flex;
-            justify-content: space-between;
+            display: block;
             margin-bottom: 12px;
             &:first-child {
                 padding-top: 12px;
