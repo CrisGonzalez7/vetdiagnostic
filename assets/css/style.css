@@ -368,7 +368,6 @@
   }
 }
 .bloque-acordion .panel .detalle-examen {
-  display: block;
   margin-bottom: 12px;
 }
 .bloque-acordion .panel .detalle-examen:first-child {
@@ -381,6 +380,22 @@
 }
 .bloque-acordion .panel .detalle-examen:last-child {
   padding-bottom: 20px;
+}
+.bloque-acordion .panel .detalle-examen .nombre {
+  font-weight: bold;
+}
+@media (min-width: 750px) {
+  .bloque-acordion .panel .detalle-examen .nombre {
+    display: inline-block;
+  }
+}
+.bloque-acordion .panel .detalle-examen .detalle {
+  font-size: 1rem;
+}
+@media (min-width: 750px) {
+  .bloque-acordion .panel .detalle-examen .detalle {
+    font-size: 1.2rem;
+  }
 }
 .bloque-acordion .panel .detalle-examen .precio {
   display: none;
