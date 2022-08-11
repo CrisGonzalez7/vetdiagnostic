@@ -756,6 +756,9 @@ header .header-examenes {
     display: block;
   }
 }
+.servicios .contenedor .examenes-contenedor .listado-examenes img {
+  max-width: 80px;
+}
 @media (min-width: 750px) {
   .servicios .contenedor .examenes-contenedor .listado-examenes img {
     display: none;
@@ -780,6 +783,8 @@ header .header-examenes {
 @media (min-width: 750px) {
   .servicios .contenedor .examenes-contenedor .img-servicios-examenes {
     display: block;
+    max-width: 480px;
+    margin-top: 10px;
   }
 }
 
@@ -896,6 +901,15 @@ header .header-examenes {
   position: fixed;
   top: 80vh;
   right: 20px;
+}
+
+.boton-volver {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+.boton-volver .boton {
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
