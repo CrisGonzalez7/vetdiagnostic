@@ -1,5 +1,5 @@
 // Animación Navbar
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded", () => {
     // El navbar se achica cuando la página hace scroll
     document.addEventListener("scroll", scroll("#navbar", "nav100"));
     document.addEventListener("scroll", scroll("#navegacion", "nav4rem"));
@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
  * returns 
  */
 function scroll(selector, clase) {
-    var navHeight = function() {
+    function navHeight() {
         // Se obtiene el elemento a agregar o quitar la clase, el nombre es recibido por parametro
         const navegacion = document.body.querySelector(selector);
 
@@ -26,7 +26,7 @@ function scroll(selector, clase) {
             // Se agrega la clase recibida por parametro
             navegacion.classList.add(clase);
         }
-    };
+    }
 
     // Se retorna la funcion creada con los parametros recibidos
     return navHeight;
@@ -35,15 +35,15 @@ function scroll(selector, clase) {
 // Animación Ícono Menú
 let elementoMenu = document.getElementsByClassName('icono-menu')[0];
 
-elementoMenu.addEventListener('click', function(event) {
+elementoMenu.addEventListener('click', function() {
     elementoMenu.classList.toggle('activo');
 
     // Secciones opacity, se obtienen todas las secciones como un listado HTMLCollection
     let secciones = document.getElementsByClassName('flex');
 
     // Se recorre uno por uno los elementos y se le agrega la clase opacity
-    for (var i = 0; i < secciones.length; i++) {
-        secciones[i].classList.toggle('clase-opacity');
+    for (const element of secciones) {
+        element.classList.toggle('clase-opacity');
     }
 });
 
@@ -51,8 +51,8 @@ elementoMenu.addEventListener('click', function(event) {
 let menuPadre = document.getElementsByClassName('enlace');
 
 // Se recorre uno por uno los elementos y se le agrega un listener para el click
-for (var i = 0; i < menuPadre.length; i++) {
-    menuPadre[i].addEventListener('click', function(event) {
+for (const element of menuPadre) {
+    element.addEventListener('click', function() {
         this.classList.toggle('activo');
     });
 }
@@ -62,19 +62,19 @@ for (var i = 0; i < menuPadre.length; i++) {
 // Animación Ícono Submenú
 let iconoSubmenu = document.getElementsByClassName('icono-submenu')[0];
 
-iconoSubmenu.addEventListener('click', function(event) {
+iconoSubmenu.addEventListener('click', function() {
     iconoSubmenu.classList.toggle('activo');
 });
 
 
 // Bloque acordión 
-var acc = document.getElementsByClassName("accordion");
-var i;
+let acc = document.getElementsByClassName("accordion");
+let i;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
-        var panel = this.nextElementSibling;
+        let panel = this.nextElementSibling;
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
         } else {
