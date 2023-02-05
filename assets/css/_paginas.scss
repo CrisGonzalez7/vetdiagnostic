@@ -11,7 +11,6 @@ $celeste: #6ED5F8;
 /* Mixins */
 
 @mixin resultados-examenes {
-    display: grid;
     grid-row-gap: 32px;
     img {
         margin: 0 auto;

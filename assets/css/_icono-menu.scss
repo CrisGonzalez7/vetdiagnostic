@@ -4,13 +4,8 @@ $width: 32px;
 $ylinea1: translateY(8px);
 $ylinea3: translateY(-10px);
 $animation: ease-in-out forwards 0.4s;
-/* Icono */
-.icono-menu {
-    width: $width;
-    margin: auto;
-}
 
-/* Lineas */
+/* Mixin */
 @mixin linea() {
     height: 3px;
     background-color: $negro;
@@ -18,30 +13,24 @@ $animation: ease-in-out forwards 0.4s;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-.linea-1 {
-    @include linea();
-}
-
-.linea-2 {
-    @include linea();
-    margin: 6px auto;
-    /* Separación entre lineas */
-}
-
-.linea-3 {
-    @include linea();
-}
-
-/* Animacion */
+/* Animacion Icono */
 .icono-menu {
+    width: $width;
+    margin: auto;
     /* Inicial */
     .linea-1 {
+        @include linea();
         animation: linea-1-inicial $animation;
     }
     .linea-2 {
+        @include linea();
+        /* Separación entre lineas */
+        margin: 6px auto;
+        /* Animacion */
         animation: linea-2-inicial $animation;
     }
     .linea-3 {
+        @include linea();
         animation: linea-3-inicial $animation;
     }
     /* Activo */
