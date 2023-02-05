@@ -1,0 +1,295 @@
+/* Variables */
+
+$negro: #35353F;
+$blanco: #F3F7F9;
+$azul: #4E869F;
+$azul-claro: #BED5DF;
+$azul-oscuro: #2E4F5D;
+$azul-boton: #84ABBC;
+$celeste: #6ED5F8;
+
+/* Mixins */
+
+@mixin resultados-examenes {
+    display: grid;
+    grid-row-gap: 32px;
+    img {
+        margin: 0 auto;
+    }
+    .examenes-texto {
+        text-align: center;
+        h3 {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            @media (min-width: 750px) {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            font-size: 1.2rem;
+            @media (min-width: 750px) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    button {
+        margin: 0 auto;
+    }
+}
+
+
+/*** Paginas ***/
+
+/* Header */
+
+header {
+    margin-top: 6rem;
+    color: $negro;
+    @media (min-width: 750px) {
+        margin-top: 8rem;
+    }
+    .header {
+        width: 100%;
+        height: 16rem;
+        display: flex;
+        flex-direction: column;
+        background-size: 120%;
+        background-repeat: no-repeat;
+        @media (min-width: 350px) {
+            height: 18rem;
+        }
+        @media (min-width: 400px) {
+            height: 20rem;
+        }
+        @media (min-width: 480px) {
+            height: 23rem;
+        }
+        @media (min-width: 550px) {
+            height: 25rem;
+        }
+        @media (min-width: 750px) {
+            height: auto;
+            background-size: 100%;
+        }
+        .resultados-desktop {
+            @include resultados-examenes();
+            display: none;
+            color: $azul-oscuro;
+            @media (min-width: 750px) {
+                display: grid;
+                padding: 32px 30px;
+                margin: 40px 64px 40px auto;
+                width: 25rem;
+                height: 23.75rem;
+                background-color: $blanco;
+                border-radius: 20px;
+                border: solid 1px;
+                border-color: $azul-oscuro;
+                opacity: 0.9;
+            }
+        }
+        .header-informacion {
+            margin: auto 0 0 0;
+            background-color: $celeste;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            @media (min-width: 750px) {
+                padding: 21px;
+                opacity: 0.9;
+            }
+            .titulo {
+                font-size: 1.4rem;
+                font-weight: bold;
+                @media (min-width: 750px) {
+                    font-size: 1.6rem;
+                }
+            }
+            p {
+                font-size: 1.2rem;
+                font-weight: normal;
+                @media (min-width: 750px) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    .header-inicio {
+        background-image: url(../img/header-inicio.png);
+        background-position-x: -3rem;
+        @media (min-width: 400px) {
+            background-position-x: -4.5rem;
+        }
+        @media (min-width: 550px) {
+            background-position-x: -6rem;
+        }
+        @media (min-width: 750px) {
+            background-position-x: 0rem;
+        }
+    }
+    .header-examenes {
+        background-image: url(../img/header-examenes.png);
+        @media (min-width: 750px) {
+            height: 80vh;
+        }
+    }
+}
+
+/*** Secciones ***/
+
+/* Servicios */ 
+
+.servicios {
+    .contenedor {
+        .examenes-contenedor {
+            display: grid;
+            text-align: center;
+            color: $negro;
+            @media (min-width: 750px) {
+                grid-template-columns: auto auto;
+            }
+            .examenes {
+                @include resultados-examenes();
+                @media (min-width: 750px) {
+                    display: none;
+                }
+            }
+            .listado-examenes {
+                display: grid;
+                margin: 48px 0 24px;
+                padding: 0 50px;
+                @media (min-width: 750px) {
+                    display: block;
+                }
+                img {
+                    max-width: 80px;
+                    @media (min-width: 750px) {
+                        display: none;
+                    }
+                }
+                .examenes-texto {
+                    h3 {
+                        @media (min-width: 750px) {
+                            font-size: 1.8rem;
+                            margin-bottom: 32px;
+                        }
+                    }
+                    p {
+                        @media (min-width: 750px) {
+                            font-size: 1.4rem;
+                            font-weight: lighter;
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
+            }
+            .img-servicios-examenes {
+                display: none;
+                @media (min-width: 750px) {
+                    display: block;
+                    max-width: 480px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* Contacto */
+
+.contacto {
+    .contenedor {
+        @media (min-width: 750px) {
+            flex-direction: column;
+        }
+        .ubicacion-contenedor {
+            display: grid;
+            @media (min-width: 750px) {
+                grid-template-columns: 50% 50%;
+            }
+            .ubicacion {
+                background-color: $azul-claro;
+                height: 220px;
+                box-shadow: 4px 4px 8px #CDCDCD;
+                @media (min-width: 750px) {
+                    height: 320px;
+                }
+                iframe {
+                    max-width: 100%;
+                    border: 0;
+                    height: 100%;
+                    width: 100%;
+                }
+                .texto-ubicacion {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    margin: auto;
+                    text-align: center;
+                    padding: 24px;
+                    font-size: 1.1rem;
+                    @media (min-width: 750px) {
+                        font-size: 1.2rem;
+                    }
+                    p {
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Footer */
+
+.footer {
+    background-color: $azul-oscuro;
+    margin-top: 68px;
+    color: $blanco;
+    text-align: center;
+    a:hover {
+        color: $celeste;
+    }
+    .contenedor100 {
+        flex-direction: column;
+        padding: 32px 0;
+        @media (min-width: 750px) {
+            flex-direction: row;
+        }
+        .creditos {
+            order: 2;
+            margin-bottom: 20px;
+            @media (min-width: 750px) {
+                margin: 0;
+                order: 0;
+                text-align: left;
+                font-size: 0.9rem;
+            }
+        }
+        .iconos-sociales {
+            margin-top: 20px;
+            @media (min-width: 750px) {
+                margin-top: 0;
+            }
+            .iconify {
+                width: 24px;
+                margin: 0 10px;
+            }
+        }
+        .ubicacion-footer {
+            margin: 24px 0;
+            @media (min-width: 750px) {
+                margin: 0;
+                text-align: right;
+                font-size: 1rem;
+            }
+            .iconify {
+                color: $celeste;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+

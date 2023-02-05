@@ -1,16 +1,16 @@
-// Variables
+/* Variables */
 $negro: #35353F;
 $width: 32px;
 $ylinea1: translateY(8px);
 $ylinea3: translateY(-10px);
 $animation: ease-in-out forwards 0.4s;
-// Icono
+/* Icono */
 .icono-menu {
     width: $width;
     margin: auto;
 }
 
-// Lineas
+/* Lineas */
 @mixin linea() {
     height: 3px;
     background-color: $negro;
@@ -32,9 +32,9 @@ $animation: ease-in-out forwards 0.4s;
     @include linea();
 }
 
-// Animacion
+/* Animacion */
 .icono-menu {
-    // Inicial
+    /* Inicial */
     .linea-1 {
         animation: linea-1-inicial $animation;
     }
@@ -44,7 +44,7 @@ $animation: ease-in-out forwards 0.4s;
     .linea-3 {
         animation: linea-3-inicial $animation;
     }
-    // Activo
+    /* Activo */
     &.activo {
         .linea-1 {
             animation: linea-1 $animation;
@@ -58,7 +58,7 @@ $animation: ease-in-out forwards 0.4s;
     }
 }
 
-// Keyframes
+/* Keyframes */
 @keyframes linea-1 {
     0% {
         transform: translateY(0) rotate(0);

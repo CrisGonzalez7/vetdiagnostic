@@ -1,0 +1,153 @@
+/* Fuentes */
+
+@font-face {
+    font-family: 'Swis721 BT';
+    src: url(../font/swiss721-bt_light.ttf);
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'Swis721 BT';
+    src: url(../font/swiss721-bt_roman.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Swis721 BT';
+    src: url(../font/swiss721-bt_bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Chiquita';
+    src: url(../font/chiquita_normal.ttf);
+    font-weight: normal;
+}
+
+/* Variables */
+
+$negro: #35353F;
+$blanco: #F3F7F9;
+$azul: #4E869F;
+$azul-claro: #BED5DF;
+$azul-oscuro: #2E4F5D;
+$azul-boton: #84ABBC;
+
+/*** Globales ***/
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Texto, Titulos y Links */
+
+body {
+    font-family: 'Swis721 BT', sans-serif;
+}
+
+a {
+    color: $blanco;
+    &:hover {
+        cursor: pointer;
+        color: $azul-oscuro;
+        transition: .3s;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.flex {
+    display: flex;
+}
+
+.titulos {
+    font-family: 'Chiquita', sans-serif;
+    font-size: 3rem;
+    font-weight: normal;
+    color: $negro;
+    @media (min-width: 750px) {
+        font-size: 3.5rem;
+    }
+}
+
+/* Botones */
+
+.boton {
+    display: block;
+    font-family: 'Swis721 BT', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    @media (min-width: 750px) {
+        padding: 14px 28px;
+        font-size: 1.4rem;
+    }
+    &.transparente {
+        background-color: $blanco;
+        border: solid 1px;
+        border-color: $azul;
+        color: $azul;
+        &:hover {
+            background-color: $azul;
+            border: solid 1px;
+            border-color: $azul;
+            color: $blanco;
+        }
+    }
+    &.relleno {
+        background-color: $azul;
+        border: solid 1px;
+        border-color: $azul;
+        color: $blanco;
+        &:hover {
+            background-color: $azul-boton;
+            border: solid 1px;
+            border-color: $azul-oscuro;
+            color: $azul-oscuro;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* Contenedor */
+
+.contenedor {
+    width: 85%;
+    margin: 0 auto;
+    @media (min-width: 750px) {
+        max-width: 1200px;
+    }
+    .titulos {
+        text-align: center;
+        margin: 40px 0;
+        @media (min-width: 750px) {
+            margin: 68px 0;
+        }
+    }
+}
+
+.contenedor100 {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    @media (min-width: 750px) {
+        width: 95%;
+    }
+}
+
+/* Clases generales */
+
+.clase-opacity {
+    opacity: 0.3;
+}
