@@ -39,7 +39,6 @@ $azul-boton: #84ABBC;
     padding: 0;
     margin: 0;
     text-decoration: none;
-    list-style: none;
     box-sizing: border-box;
 }
 
@@ -47,6 +46,7 @@ $azul-boton: #84ABBC;
 
 body {
     font-family: 'Swis721 BT', sans-serif;
+    color: $negro;
 }
 
 a {
@@ -58,22 +58,52 @@ a {
     }
 }
 
+h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    @media (min-width: 750px) {
+        font-size: 1.6rem;
+    }
+}
+
+h2 {
+    font-family: 'Chiquita', sans-serif;
+    font-size: 3rem;
+    font-weight: normal;
+    @media (min-width: 750px) {
+        font-size: 3.5rem;
+    }
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    @media (min-width: 750px) {
+        font-size: 1.8rem;
+    }
+}
+
+p {
+    font-size: 1.2rem;
+    @media (min-width: 750px) {
+        font-size: 1.4rem;
+    }
+}
+
+ul {
+    list-style: none; 
+    font-size: 1.2rem;
+    @media (min-width: 750px) {
+        font-size: 1.4rem;
+    }
+}
+
 .bold {
     font-weight: bold;
 }
 
 .flex {
     display: flex;
-}
-
-.titulos {
-    font-family: 'Chiquita', sans-serif;
-    font-size: 3rem;
-    font-weight: normal;
-    color: $negro;
-    @media (min-width: 750px) {
-        font-size: 3.5rem;
-    }
 }
 
 /* Botones */

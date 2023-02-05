@@ -26,13 +26,13 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  list-style: none;
   box-sizing: border-box;
 }
 
 /* Texto, Titulos y Links */
 body {
   font-family: "Swis721 BT", sans-serif;
+  color: #35353F;
 }
 
 a {
@@ -44,24 +44,62 @@ a:hover {
   transition: 0.3s;
 }
 
+h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+@media (min-width: 750px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+h2 {
+  font-family: "Chiquita", sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+}
+@media (min-width: 750px) {
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+@media (min-width: 750px) {
+  h3 {
+    font-size: 1.8rem;
+  }
+}
+
+p {
+  font-size: 1.2rem;
+}
+@media (min-width: 750px) {
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+ul {
+  list-style: none;
+  font-size: 1.2rem;
+}
+@media (min-width: 750px) {
+  ul {
+    font-size: 1.4rem;
+  }
+}
+
 .bold {
   font-weight: bold;
 }
 
 .flex {
   display: flex;
-}
-
-.titulos {
-  font-family: "Chiquita", sans-serif;
-  font-size: 3rem;
-  font-weight: normal;
-  color: #35353F;
-}
-@media (min-width: 750px) {
-  .titulos {
-    font-size: 3.5rem;
-  }
 }
 
 /* Botones */
@@ -342,8 +380,6 @@ a:hover {
   }
 }
 .navbar {
-  color: #35353F;
-  font-family: "Swis721 BT", sans-serif;
   font-weight: normal;
   height: 6rem;
   position: fixed;
@@ -473,7 +509,7 @@ a:hover {
 }
 .enlaces li.activo > ul {
   display: block;
-  right: 100px;
+  right: 300px;
   background-color: #F3F7F9;
 }
 @media (min-width: 750px) {
@@ -539,7 +575,6 @@ a:hover {
 /* Header */
 header {
   margin-top: 6rem;
-  color: #35353F;
 }
 @media (min-width: 750px) {
   header {
@@ -581,6 +616,7 @@ header .header {
   }
 }
 header .header .resultados-desktop {
+  display: grid;
   grid-row-gap: 32px;
   display: none;
   color: #2E4F5D;
@@ -592,22 +628,11 @@ header .header .resultados-desktop .examenes-texto {
   text-align: center;
 }
 header .header .resultados-desktop .examenes-texto h3 {
-  font-weight: bold;
-  font-size: 1.5rem;
   margin-bottom: 16px;
 }
 @media (min-width: 750px) {
   header .header .resultados-desktop .examenes-texto h3 {
-    font-size: 1.8rem;
     margin-bottom: 10px;
-  }
-}
-header .header .resultados-desktop .examenes-texto p {
-  font-size: 1.2rem;
-}
-@media (min-width: 750px) {
-  header .header .resultados-desktop .examenes-texto p {
-    font-size: 1.4rem;
   }
 }
 header .header .resultados-desktop button {
@@ -627,6 +652,14 @@ header .header .resultados-desktop button {
     opacity: 0.9;
   }
 }
+header .header .resultados-desktop p {
+  font-size: 1.2rem;
+}
+@media (min-width: 750px) {
+  header .header .resultados-desktop p {
+    font-size: 1.4rem;
+  }
+}
 header .header .header-informacion {
   margin: auto 0 0 0;
   background-color: #6ED5F8;
@@ -638,15 +671,6 @@ header .header .header-informacion {
   header .header .header-informacion {
     padding: 21px;
     opacity: 0.9;
-  }
-}
-header .header .header-informacion .titulo {
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-@media (min-width: 750px) {
-  header .header .header-informacion .titulo {
-    font-size: 1.6rem;
   }
 }
 header .header .header-informacion p {
@@ -686,12 +710,23 @@ header .header-examenes {
   }
 }
 
+/* Nosotros */
+.texto-nosotros h3, .texto-nosotros p {
+  margin-bottom: 3rem;
+}
+.texto-nosotros h3 {
+  text-align: center;
+}
+.texto-nosotros ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
 /*** Secciones ***/
 /* Servicios */
 .servicios .contenedor .examenes-contenedor {
   display: grid;
   text-align: center;
-  color: #35353F;
 }
 @media (min-width: 750px) {
   .servicios .contenedor .examenes-contenedor {
@@ -699,6 +734,7 @@ header .header-examenes {
   }
 }
 .servicios .contenedor .examenes-contenedor .examenes {
+  display: grid;
   grid-row-gap: 32px;
 }
 .servicios .contenedor .examenes-contenedor .examenes img {
@@ -708,22 +744,11 @@ header .header-examenes {
   text-align: center;
 }
 .servicios .contenedor .examenes-contenedor .examenes .examenes-texto h3 {
-  font-weight: bold;
-  font-size: 1.5rem;
   margin-bottom: 16px;
 }
 @media (min-width: 750px) {
   .servicios .contenedor .examenes-contenedor .examenes .examenes-texto h3 {
-    font-size: 1.8rem;
     margin-bottom: 10px;
-  }
-}
-.servicios .contenedor .examenes-contenedor .examenes .examenes-texto p {
-  font-size: 1.2rem;
-}
-@media (min-width: 750px) {
-  .servicios .contenedor .examenes-contenedor .examenes .examenes-texto p {
-    font-size: 1.4rem;
   }
 }
 .servicios .contenedor .examenes-contenedor .examenes button {
@@ -813,15 +838,15 @@ header .header-examenes {
   margin: auto;
   text-align: center;
   padding: 24px;
-  font-size: 1.1rem;
-}
-@media (min-width: 750px) {
-  .contacto .contenedor .ubicacion-contenedor .ubicacion .texto-ubicacion {
-    font-size: 1.2rem;
-  }
 }
 .contacto .contenedor .ubicacion-contenedor .ubicacion .texto-ubicacion p {
   margin: auto;
+  font-size: 1.1rem;
+}
+@media (min-width: 750px) {
+  .contacto .contenedor .ubicacion-contenedor .ubicacion .texto-ubicacion p {
+    font-size: 1.2rem;
+  }
 }
 
 /* Footer */
@@ -855,6 +880,9 @@ header .header-examenes {
     font-size: 0.9rem;
   }
 }
+.footer .contenedor100 .creditos p {
+  font-size: 0.8rem;
+}
 .footer .contenedor100 .iconos-sociales {
   margin-top: 20px;
 }
@@ -869,12 +897,12 @@ header .header-examenes {
 }
 .footer .contenedor100 .ubicacion-footer {
   margin: 24px 0;
+  font-size: 1rem;
 }
 @media (min-width: 750px) {
   .footer .contenedor100 .ubicacion-footer {
     margin: 0;
     text-align: right;
-    font-size: 1rem;
   }
 }
 .footer .contenedor100 .ubicacion-footer .iconify {
@@ -931,7 +959,6 @@ header .header-examenes {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   font-size: 1.2rem;
-  color: #35353F;
 }
 @media (min-width: 750px) {
   .bloque-acordion .panel {
@@ -988,10 +1015,11 @@ header .header-examenes {
   right: 20px;
 }
 
+/* Boton volver */
 .boton-volver {
   display: flex;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 3rem;
 }
 .boton-volver .boton {
   margin: auto;

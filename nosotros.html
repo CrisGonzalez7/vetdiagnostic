@@ -34,7 +34,7 @@
     <div class="navbar" id="navbar">
         <div class="contenedor100">
             <div class="logo">
-                <a href="#" class="link-logo">
+                <a href="./index.html" class="link-logo">
                     <img class="imagen-logo" src="assets/img/logo-vetdiagnostic.png" alt="Botón Inicio - VetDiagnostic">
                 </a>
             </div>
@@ -54,7 +54,7 @@
             <nav class="navegacion" id="navegacion">
                 <ul class="enlaces">
                     <li class="enlace">
-                        <a class="active" href="#">Inicio</a>
+                        <a href="./index.html?v=4.0">Inicio</a>
                     </li>
                     <li class="enlace submenu-padre">
                         <a href="#">Servicios <span class="iconify icono-submenu" data-icon="ant-design:caret-down-filled"></span></a>
@@ -64,7 +64,7 @@
                         </ul>
                     </li>
                     <li class="enlace">
-                        <a href="./nosotros.html">Nosotros</a>
+                        <a class="active" href="./nosotros.html">Nosotros</a>
                     </li>
                     <li class="enlace">
                         <a href="#contacto">Contacto</a>
@@ -75,15 +75,7 @@
     </div>
 
     <header class="flex">
-        <div class="contenedor header header-inicio">
-            <div class="resultados-desktop">
-                <img src="./assets/img/resultados-icono.png" alt="">
-                <div class="examenes-texto">
-                    <h3>Orden y Resultados</h3>
-                    <p>Genera tu orden y revisa resultados haciendo clic en ingresar</p>
-                </div>
-                <a href="https://app.veterlink.com/LaboratorioControllerPublico/index/vet_diagnostic" target="_blank"><button class="boton relleno">Ingresar ></button></a>
-            </div>
+        <div class="contenedor header header-examenes">
             <div class="header-informacion">
                 <h1 class="titulo">Vet Diagnostic</h1>
                 <p>Contacto: +56989232674</p>
@@ -91,37 +83,29 @@
         </div>
     </header>
 
-    <section class="servicios flex">
+    <section class="servicios-examenes flex">
         <div class="contenedor">
-            <h2 class="titulos">Servicios</h2>
-            <div class="examenes-contenedor">
-                <div class="examenes">
-                    <img src="./assets/img/resultados-icono.png" alt="">
-                    <div class="examenes-texto">
-                        <h3>Orden y Resultados</h3>
-                        <p>Genera tu orden y revisa resultados haciendo clic en ingresar</p>
-                    </div>
-                    <a href="https://app.veterlink.com/LaboratorioControllerPublico/index/vet_diagnostic" target="_blank"><button class="boton transparente">Ingresar ></button></a>
-                </div>
-                <img class="img-servicios-examenes" src="./assets/img/servicios-examenes.png" alt="">
-                <div class="examenes listado-examenes">
-                    <img src="./assets/img/examenes-icono.png" alt="">
-                    <div class="examenes-texto">
-                        <h3>Exámenes</h3>
-                        <p>Conoce el listado de exámenes que realizamos en nuestra sucursal</p>
-                    </div>
-                    <a href="./examenes.html"><button class="boton transparente">Ver listado ></button></a>
-                </div>
-                <img class="img-servicios-examenes" src="./assets/img/retiro-muestras.jpg" alt="">
-                <div class="examenes listado-examenes">
-                    <img src="./assets/img/retiro-muestras-icono.png" alt="">
-                    <div class="examenes-texto">
-                        <h3>Retiro de muestras</h3>
-                        <p>Contamos con retiro de muestras desde Olmué hasta Nogales</p>
-                    </div>
-                    <a href="https://wa.me/56989232674" target="_blank"><button class="boton transparente">Agenda tu retiro ></button></a>
-                </div>
+            <h2 class="titulos">Nosotros</h2>
+            <div class="texto-nosotros">
+                <p>VetDiagnostic es un laboratorio clínico veterinario creado a fines del año 2014 en la ciudad de Limache con el fin de mejorar las herramientas de diagnóstico disponible en la zona para las clínicas veterinarias y médicos veterinarios independientes.</p>
+                <p>Nos especializamos en el área de patología clínica en la cual contamos con profesionales altamente calificados para realizar esta labor, además contamos con alianzas estratégicas con importantes laboratorios a nivel nacional los cuales nos apoyan en nuestra misión.
+                    Para garantizar la certeza de nuestros resultados, VetDiagnostic cuenta con controles de calidad estrictos tanto internos como externos. (Prevecal, España.)</p>
+                <p>VetDiagnostic desde el 2018 trabaja de la mano junto al SAG en el programa oficial de erradicación de brucelosis bovina en la región mediante el muestreo en ferias ganaderas.
+                    Hoy en día VetDiagnostic está ubicado en la ciudad de Quillota de forma estratégica para estar más cerca de nuestros clientes ubicados entre Limache y Nogales.
+                    </p>
+                <h3>Misión</h3>
+                <p>Realizar exámenes de laboratorio clínico veterinario, manteniendo una relación cercana y confiable con nuestros clientes, entregando excelencia en nuestros procesos y servicios.</p>
+                <h3>Visión</h3>
+                <p>Posicionarse como el laboratorio clínico veterinario de mayor confiabilidad en la V Región.</p>
+                <h3>Valores</h3>
+                <ul>
+                    <li>Excelencia</li>
+                    <li>Responsabilidad</li>
+                    <li>Profesionalismo</li>
+                    <li>Amabilidad</li>
+                </ul>
             </div>
+            <a class="boton-volver" href="./index.html?v=4.0"><button class="boton transparente">Volver al inicio</button></a>
         </div>
     </section>
 
@@ -143,12 +127,11 @@
     </section>
 
     <!-- WhatsApp flotante -->
-    <div class="whatsapp-flotante">
-        <a href="https://wa.me/56989232674" target="_blank">
+    <div class="whatsapp-flotante" target="_blank">
+        <a href="https://wa.me/56989232674">
             <span class="iconify" data-icon="logos:whatsapp-icon" data-width="48"></span>
         </a>
     </div>
-
 
     <footer class="footer">
         <div class="contenedor100">
