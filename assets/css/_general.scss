@@ -149,6 +149,15 @@ ul {
     }
 }
 
+.boton-volver {
+    display: flex;
+    width: 100%;
+    margin-top: 3rem;
+    .boton {
+        margin: auto;
+    }
+}
+
 /* Contenedor */
 
 .contenedor {
