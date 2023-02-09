@@ -108,7 +108,6 @@ ul {
   font-family: "Swis721 BT", sans-serif;
   font-weight: bold;
   padding: 10px 20px;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 10px;
@@ -148,9 +147,18 @@ ul {
   cursor: pointer;
 }
 
+.boton-volver {
+  display: flex;
+  width: 100%;
+  margin-top: 3rem;
+}
+.boton-volver .boton {
+  margin: auto;
+}
+
 /* Contenedor */
 .contenedor {
-  width: 85%;
+  width: 80%;
   margin: 0 auto;
 }
 @media (min-width: 750px) {
@@ -176,7 +184,7 @@ ul {
 }
 @media (min-width: 750px) {
   .contenedor100 {
-    width: 95%;
+    max-width: 1320px;
   }
 }
 
@@ -199,8 +207,7 @@ ul {
   background-color: #35353F;
   border-radius: 5px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
-  -webkit-animation: linea-1-inicial ease-in-out forwards 0.4s;
-          animation: linea-1-inicial ease-in-out forwards 0.4s;
+  animation: linea-1-inicial ease-in-out forwards 0.4s;
 }
 .icono-menu .linea-2 {
   height: 3px;
@@ -210,42 +217,26 @@ ul {
   /* Separación entre lineas */
   margin: 6px auto;
   /* Animacion */
-  -webkit-animation: linea-2-inicial ease-in-out forwards 0.4s;
-          animation: linea-2-inicial ease-in-out forwards 0.4s;
+  animation: linea-2-inicial ease-in-out forwards 0.4s;
 }
 .icono-menu .linea-3 {
   height: 3px;
   background-color: #35353F;
   border-radius: 5px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
-  -webkit-animation: linea-3-inicial ease-in-out forwards 0.4s;
-          animation: linea-3-inicial ease-in-out forwards 0.4s;
+  animation: linea-3-inicial ease-in-out forwards 0.4s;
 }
 .icono-menu.activo .linea-1 {
-  -webkit-animation: linea-1 ease-in-out forwards 0.4s;
-          animation: linea-1 ease-in-out forwards 0.4s;
+  animation: linea-1 ease-in-out forwards 0.4s;
 }
 .icono-menu.activo .linea-2 {
-  -webkit-animation: linea-2 ease-in-out forwards 0.2s;
-          animation: linea-2 ease-in-out forwards 0.2s;
+  animation: linea-2 ease-in-out forwards 0.2s;
 }
 .icono-menu.activo .linea-3 {
-  -webkit-animation: linea-3 ease-in-out forwards 0.4s;
-          animation: linea-3 ease-in-out forwards 0.4s;
+  animation: linea-3 ease-in-out forwards 0.4s;
 }
 
 /* Keyframes */
-@-webkit-keyframes linea-1 {
-  0% {
-    transform: translateY(0) rotate(0);
-  }
-  50% {
-    transform: translateY(8px) rotate(0);
-  }
-  100% {
-    transform: translateY(8px) rotate(45deg);
-  }
-}
 @keyframes linea-1 {
   0% {
     transform: translateY(0) rotate(0);
@@ -257,17 +248,6 @@ ul {
     transform: translateY(8px) rotate(45deg);
   }
 }
-@-webkit-keyframes linea-1-inicial {
-  0% {
-    transform: translateY(8px) rotate(45deg);
-  }
-  50% {
-    transform: translateY(8px) rotate(0);
-  }
-  100% {
-    transform: translateY(0) rotate(0);
-  }
-}
 @keyframes linea-1-inicial {
   0% {
     transform: translateY(8px) rotate(45deg);
@@ -277,20 +257,6 @@ ul {
   }
   100% {
     transform: translateY(0) rotate(0);
-  }
-}
-@-webkit-keyframes linea-2 {
-  0% {
-    width: 32px;
-    opacity: 1;
-  }
-  80% {
-    width: 10px;
-    opacity: 0.5;
-  }
-  100% {
-    width: 0px;
-    opacity: 0;
   }
 }
 @keyframes linea-2 {
@@ -307,20 +273,6 @@ ul {
     opacity: 0;
   }
 }
-@-webkit-keyframes linea-2-inicial {
-  0% {
-    width: 0px;
-    opacity: 0;
-  }
-  50% {
-    width: 10px;
-    opacity: 0.5;
-  }
-  100% {
-    width: 32px;
-    opacity: 1;
-  }
-}
 @keyframes linea-2-inicial {
   0% {
     width: 0px;
@@ -335,17 +287,6 @@ ul {
     opacity: 1;
   }
 }
-@-webkit-keyframes linea-3 {
-  0% {
-    transform: translateY(0) rotate(0);
-  }
-  50% {
-    transform: translateY(-10px) rotate(0);
-  }
-  100% {
-    transform: translateY(-10px) rotate(135deg);
-  }
-}
 @keyframes linea-3 {
   0% {
     transform: translateY(0) rotate(0);
@@ -355,17 +296,6 @@ ul {
   }
   100% {
     transform: translateY(-10px) rotate(135deg);
-  }
-}
-@-webkit-keyframes linea-3-inicial {
-  0% {
-    transform: translateY(-10px) rotate(135deg);
-  }
-  50% {
-    transform: translateY(-10px) rotate(0);
-  }
-  100% {
-    transform: translateY(0) rotate(0);
   }
 }
 @keyframes linea-3-inicial {
@@ -575,6 +505,19 @@ ul {
 /* Header */
 header {
   margin-top: 6rem;
+  /* .header-inicio {
+      background-image: url(../img/header-1-vetdiagnostic.png);
+      background-position-x: -3rem;
+      @media (min-width: 400px) {
+          background-position-x: -4.5rem;
+      }
+      @media (min-width: 550px) {
+          background-position-x: -6rem;
+      }
+      @media (min-width: 750px) {
+          background-position-x: 0rem;
+      }
+  } */
 }
 @media (min-width: 750px) {
   header {
@@ -682,25 +625,6 @@ header .header .header-informacion p {
     font-size: 1.4rem;
   }
 }
-header .header-inicio {
-  background-image: url(../img/header-1-vetdiagnostic.png);
-  background-position-x: -3rem;
-}
-@media (min-width: 400px) {
-  header .header-inicio {
-    background-position-x: -4.5rem;
-  }
-}
-@media (min-width: 550px) {
-  header .header-inicio {
-    background-position-x: -6rem;
-  }
-}
-@media (min-width: 750px) {
-  header .header-inicio {
-    background-position-x: 0rem;
-  }
-}
 header .header-examenes {
   background-image: url(../img/header-1-vetdiagnostic.png);
 }
@@ -711,7 +635,8 @@ header .header-examenes {
 }
 
 /* Nosotros */
-.texto-nosotros h3, .texto-nosotros p {
+.texto-nosotros h3,
+.texto-nosotros p {
   margin-bottom: 3rem;
 }
 .texto-nosotros h3 {
@@ -1007,20 +932,33 @@ header .header-examenes {
   margin: 0 auto;
 }
 
+[data-component=slideshow] .slide {
+  display: none;
+  text-align: center;
+}
+
+[data-component=slideshow] .slide.active {
+  display: block;
+}
+
+.header-inicio {
+  position: relative;
+  height: 580px;
+}
+
+.slide-header {
+  position: absolute;
+}
+
+.slide img {
+  width: 1200px;
+  max-height: 580px;
+}
+
 /*** Componentes ***/
 /* WhatsApp Flotante */
 .whatsapp-flotante {
   position: fixed;
   top: 80vh;
   right: 20px;
-}
-
-/* Boton volver */
-.boton-volver {
-  display: flex;
-  width: 100%;
-  margin-top: 3rem;
-}
-.boton-volver .boton {
-  margin: auto;
 }/*# sourceMappingURL=style.css.map */

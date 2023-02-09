@@ -1,0 +1,22 @@
+[data-component="slideshow"] .slide {
+    display: none;
+    text-align: center;
+}
+
+[data-component="slideshow"] .slide.active {
+    display: block;
+}
+
+.header-inicio {
+    position: relative;
+    height: 580px;
+}
+
+.slide-header {
+    position: absolute;
+}
+
+.slide img {
+    width: 1200px;
+    max-height: 580px;
+}
