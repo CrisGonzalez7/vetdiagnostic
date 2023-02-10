@@ -1,11 +1,11 @@
-var slideshows = document.querySelectorAll('[data-component="slideshow"]');
+let slideshows = document.querySelectorAll('[data-component="slideshow"]');
 slideshows.forEach(initSlideShow);
 
 function initSlideShow(slideshow) {
 
-    var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`);
+    let slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`);
 
-    var index = 0,
+    let index = 0,
         time = 5000;
     slides[index].classList.add('active');
 
