@@ -23,7 +23,8 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>VetDiagnostic - Laboratorio Clínico Veterinario</title>
+    <!-- Title -->
+    <title>VetDiagnostic - Nosotros</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     <!-- Estilos -->
@@ -31,6 +32,7 @@
 </head>
 
 <body>
+    <!-- Navbar -->
     <div class="navbar" id="navbar">
         <div class="contenedor100">
             <div class="logo">
@@ -74,8 +76,32 @@
         </div>
     </div>
 
+    <!-- Header -->
     <header class="flex">
-        <div class="contenedor header header-examenes">
+        <div class="contenedor header">
+            <div class="slide-header">
+                <div id="slide-imagenes" class="slide-imagenes" data-component="slideshow">
+                    <div role="list">
+                        <div class="slide">
+                            <img src="assets/img/header-1-vetdiagnostic.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/header-examenes.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1498753427761-548428edfa67?w=889&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="resultados-desktop">
+                    <img src="./assets/img/resultados-icono.png" alt="">
+                    <div class="examenes-texto">
+                        <h3>Orden y Resultados</h3>
+                        <p>Genera tu orden y revisa resultados haciendo clic en ingresar</p>
+                    </div>
+                    <a href="https://app.veterlink.com/LaboratorioControllerPublico/index/vet_diagnostic" target="_blank"><button class="boton relleno">Ingresar ></button></a>
+                </div>
+            </div>
             <div class="header-informacion">
                 <h1 class="titulo">Vet Diagnostic</h1>
                 <p>Contacto: +56989232674</p>
@@ -83,15 +109,16 @@
         </div>
     </header>
 
+    <!-- Seccion Servicios -->
     <section class="servicios-examenes flex">
         <div class="contenedor">
             <h2 class="titulos">Nosotros</h2>
             <div class="texto-nosotros">
                 <p>VetDiagnostic es un laboratorio clínico veterinario creado a fines del año 2014 en la ciudad de Limache con el fin de mejorar las herramientas de diagnóstico disponible en la zona para las clínicas veterinarias y médicos veterinarios independientes.</p>
-                <p>Nos especializamos en el área de patología clínica en la cual contamos con profesionales altamente calificados para realizar esta labor, además contamos con alianzas estratégicas con importantes laboratorios a nivel nacional los cuales nos apoyan en nuestra misión.
-                    Para garantizar la certeza de nuestros resultados, VetDiagnostic cuenta con controles de calidad estrictos tanto internos como externos. (Prevecal, España.)</p>
+                <p>Nos especializamos en el área de patología clínica en la cual contamos con profesionales altamente calificados para realizar esta labor, además contamos con alianzas estratégicas con importantes laboratorios a nivel nacional los cuales
+                    nos apoyan en nuestra misión. Para garantizar la certeza de nuestros resultados, VetDiagnostic cuenta con controles de calidad estrictos tanto internos como externos. (Prevecal, España.)</p>
                 <p>Hoy en día VetDiagnostic está ubicado en la ciudad de Quillota de forma estratégica para estar más cerca de nuestros clientes ubicados entre Limache y Nogales.
-                    </p>
+                </p>
                 <h3>Misión</h3>
                 <p>Realizar exámenes de laboratorio clínico veterinario, manteniendo una relación cercana y confiable con nuestros clientes, entregando excelencia en nuestros procesos y servicios.</p>
                 <h3>Visión</h3>
@@ -108,6 +135,7 @@
         </div>
     </section>
 
+    <!-- Sección Contacto -->
     <section class="contacto flex" id="contacto">
         <div class="contenedor">
             <h2 class="titulos">Contacto</h2>
@@ -132,6 +160,7 @@
         </a>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="contenedor100">
             <div class="creditos">
@@ -153,6 +182,7 @@
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <!-- Mi script -->
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/slide-header.js"></script>
 </body>
 
 </html>
