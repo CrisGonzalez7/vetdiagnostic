@@ -943,7 +943,13 @@ header .header-examenes {
 
 .slide-header {
   position: relative;
-  height: 580px;
+  height: 240px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .slide-header {
+    height: 580px;
+  }
 }
 
 .slide-imagenes {
@@ -951,8 +957,14 @@ header .header-examenes {
 }
 
 .slide img {
-  width: 1200px;
-  max-height: 580px;
+  width: 100%;
+  min-height: 240px;
+}
+@media (min-width: 768px) {
+  .slide img {
+    width: 1200px;
+    height: 580px;
+  }
 }
 
 /*** Componentes ***/
