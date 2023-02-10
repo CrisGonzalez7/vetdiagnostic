@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
  */
 function scroll(selector, clase) {
     function navHeight() {
-        // Se obtiene el elemento a agregar o quitar la clase, el nombre es recibido por parametro
+        // Se obtiene el elemento                 a agregar o quitar la clase, el nombre es recibido por parametro
         const navegacion = document.body.querySelector(selector);
 
         if (window.scrollY === 0) {
@@ -65,20 +65,3 @@ let iconoSubmenu = document.getElementsByClassName('icono-submenu')[0];
 iconoSubmenu.addEventListener('click', function() {
     iconoSubmenu.classList.toggle('activo');
 });
-
-
-// Bloque acordión 
-let acc = document.getElementsByClassName("accordion");
-let i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        let panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-}
