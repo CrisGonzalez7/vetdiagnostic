@@ -1,6 +1,7 @@
 [data-component="slideshow"] .slide {
     display: none;
     text-align: center;
+    transition: 2s;
 }
 
 [data-component="slideshow"] .slide.active {
