@@ -968,48 +968,6 @@ header .header-examenes {
   }
 }
 
-.header-inicio {
-  background-image: url(../img/header-1-vetdiagnostic.png);
-  background-position-x: -3rem;
-}
-@media (min-width: 400px) {
-  .header-inicio {
-    background-position-x: -4.5rem;
-  }
-}
-@media (min-width: 550px) {
-  .header-inicio {
-    background-position-x: -6rem;
-  }
-}
-@media (min-width: 750px) {
-  .header-inicio {
-    background-position-x: 0rem;
-  }
-}
-
-.header-inicio {
-  animation: animacion-1 10s ease-in infinite alternate;
-}
-
-@keyframes animacion-1 {
-  0% {
-    background-image: url(../img/header-1-vetdiagnostic.png);
-  }
-  18% {
-    opacity: 0.5;
-  }
-  20% {
-    background-image: url(../img/header-examenes.png);
-    opacity: 0.3;
-  }
-  22% {
-    opacity: 1;
-  }
-  60% {
-    background-image: url(../img/header-inicio.png);
-  }
-}
 /*** Componentes ***/
 /* WhatsApp Flotante */
 .whatsapp-flotante {
