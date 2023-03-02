@@ -12,6 +12,9 @@
     position: relative;
     height: 240px;
     overflow: hidden;
+    @media (min-width: 550px) {
+        height: 30rem;
+    }
     @media (min-width: 768px) {
         height: 580px;
     }
