@@ -38,7 +38,10 @@ $celeste: #6ED5F8;
 
 header {
     margin-top: 6rem;
-    @media (min-width: 750px) {
+    @media (min-width: 768px) {
+        margin-top: 7rem;
+    }
+    @media (min-width: 1200px) {
         margin-top: 8rem;
     }
     .header {
@@ -69,7 +72,7 @@ header {
             @include resultados-examenes();
             display: none;
             color: $azul-oscuro;
-            @media (min-width: 750px) {
+            @media (min-width: 1200px) {
                 display: grid;
                 padding: 32px 30px;
                 margin: 40px 64px 40px auto;
@@ -156,12 +159,12 @@ header {
         .examenes-contenedor {
             display: grid;
             text-align: center;
-            @media (min-width: 750px) {
+            @media (min-width: 1200px) {
                 grid-template-columns: auto auto;
             }
             .examenes {
                 @include resultados-examenes();
-                @media (min-width: 750px) {
+                @media (min-width: 1200px) {
                     display: none;
                 }
             }
@@ -169,24 +172,24 @@ header {
                 display: grid;
                 margin: 48px 0 24px;
                 padding: 0 50px;
-                @media (min-width: 750px) {
+                @media (min-width: 1200px) {
                     display: block;
                 }
                 img {
                     max-width: 80px;
-                    @media (min-width: 750px) {
+                    @media (min-width: 1200px) {
                         display: none;
                     }
                 }
                 .examenes-texto {
                     h3 {
-                        @media (min-width: 750px) {
+                        @media (min-width: 1200px) {
                             font-size: 1.8rem;
                             margin-bottom: 32px;
                         }
                     }
                     p {
-                        @media (min-width: 750px) {
+                        @media (min-width: 1200px) {
                             font-size: 1.4rem;
                             font-weight: lighter;
                             margin-bottom: 40px;
@@ -196,7 +199,7 @@ header {
             }
             .img-servicios-examenes {
                 display: none;
-                @media (min-width: 750px) {
+                @media (min-width: 1200px) {
                     display: block;
                     max-width: 480px;
                     margin-top: 10px;
@@ -211,19 +214,19 @@ header {
 
 .contacto {
     .contenedor {
-        @media (min-width: 750px) {
+        @media (min-width: 1200px) {
             flex-direction: column;
         }
         .ubicacion-contenedor {
             display: grid;
-            @media (min-width: 750px) {
+            @media (min-width: 1200px) {
                 grid-template-columns: 50% 50%;
             }
             .ubicacion {
                 background-color: $azul-claro;
                 height: 220px;
                 box-shadow: 4px 4px 8px #CDCDCD;
-                @media (min-width: 750px) {
+                @media (min-width: 1200px) {
                     height: 320px;
                 }
                 iframe {
@@ -242,7 +245,7 @@ header {
                     p {
                         margin: auto;
                         font-size: 1.1rem;
-                        @media (min-width: 750px) {
+                        @media (min-width: 1200px) {
                             font-size: 1.2rem;
                         }
                     }

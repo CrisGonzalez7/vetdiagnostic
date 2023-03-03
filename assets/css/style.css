@@ -322,6 +322,11 @@ ul {
   background-color: #F3F7F9;
   box-shadow: 0px 1px 6px #CDCDCD;
 }
+@media (min-width: 768px) {
+  .navbar {
+    height: 7rem;
+  }
+}
 @media (min-width: 1200px) {
   .navbar {
     height: 8rem;
@@ -364,6 +369,11 @@ ul {
   left: 100%;
   transition: all 0.5s;
   z-index: 10;
+}
+@media (min-width: 768px) {
+  .navegacion {
+    top: 7rem;
+  }
 }
 @media (min-width: 1200px) {
   .navegacion {
@@ -473,7 +483,7 @@ ul {
   height: 6rem;
   transition: height 0.3s;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .imagen-logo {
     height: 7rem;
   }
@@ -483,7 +493,7 @@ ul {
   height: 4rem;
   transition: height 0.3s;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .nav100 {
     height: 6rem;
   }
@@ -493,7 +503,7 @@ ul {
   height: 4rem;
   transition: height 0.3s;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .nav100 .imagen-logo {
     height: 6rem;
   }
@@ -519,7 +529,12 @@ header {
       }
   } */
 }
-@media (min-width: 750px) {
+@media (min-width: 768px) {
+  header {
+    margin-top: 7rem;
+  }
+}
+@media (min-width: 1200px) {
   header {
     margin-top: 8rem;
   }
@@ -580,7 +595,7 @@ header .header .resultados-desktop .examenes-texto h3 {
 header .header .resultados-desktop button {
   margin: 0 auto;
 }
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
   header .header .resultados-desktop {
     display: grid;
     padding: 32px 30px;
@@ -652,7 +667,7 @@ header .header-examenes {
   display: grid;
   text-align: center;
 }
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
   .servicios .contenedor .examenes-contenedor {
     grid-template-columns: auto auto;
   }
@@ -678,7 +693,7 @@ header .header-examenes {
 .servicios .contenedor .examenes-contenedor .examenes button {
   margin: 0 auto;
 }
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
   .servicios .contenedor .examenes-contenedor .examenes {
     display: none;
   }
@@ -688,7 +703,7 @@ header .header-examenes {
   margin: 48px 0 24px;
   padding: 0 50px;
 }
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
   .servicios .contenedor .examenes-contenedor .listado-examenes {
     display: block;
   }
@@ -696,18 +711,18 @@ header .header-examenes {
 .servicios .contenedor .examenes-contenedor .listado-examenes img {
   max-width: 80px;
 }
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
   .servicios .contenedor .examenes-contenedor .listado-examenes img {
     display: none;
   }
 }
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
   .servicios .contenedor .examenes-contenedor .listado-examenes .examenes-texto h3 {
     font-size: 1.8rem;
     margin-bottom: 32px;
   }
 }
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
   .servicios .contenedor .examenes-contenedor .listado-examenes .examenes-texto p {
     font-size: 1.4rem;
     font-weight: lighter;
@@ -717,7 +732,7 @@ header .header-examenes {
 .servicios .contenedor .examenes-contenedor .img-servicios-examenes {
   display: none;
 }
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
   .servicios .contenedor .examenes-contenedor .img-servicios-examenes {
     display: block;
     max-width: 480px;
@@ -726,7 +741,7 @@ header .header-examenes {
 }
 
 /* Contacto */
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
   .contacto .contenedor {
     flex-direction: column;
   }
@@ -734,7 +749,7 @@ header .header-examenes {
 .contacto .contenedor .ubicacion-contenedor {
   display: grid;
 }
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
   .contacto .contenedor .ubicacion-contenedor {
     grid-template-columns: 50% 50%;
   }
@@ -744,7 +759,7 @@ header .header-examenes {
   height: 220px;
   box-shadow: 4px 4px 8px #CDCDCD;
 }
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
   .contacto .contenedor .ubicacion-contenedor .ubicacion {
     height: 320px;
   }
@@ -767,7 +782,7 @@ header .header-examenes {
   margin: auto;
   font-size: 1.1rem;
 }
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
   .contacto .contenedor .ubicacion-contenedor .ubicacion .texto-ubicacion p {
     font-size: 1.2rem;
   }
